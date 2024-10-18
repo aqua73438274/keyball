@@ -16,8 +16,8 @@ const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC
 const key_override_t **key_overrides = (const key_override_t *[]){
     &delete_key_override,
     // &hiragana_nn_override,
-    NULL;  // オーバーライドの配列は Null で終了
-}
+    NULL  // オーバーライドの配列は Null で終了
+};
 
 
 
