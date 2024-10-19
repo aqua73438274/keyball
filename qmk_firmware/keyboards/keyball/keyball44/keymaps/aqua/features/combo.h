@@ -75,77 +75,83 @@ enum combos {
 typedef const uint16_t combo_keys_t[];
 
 static PROGMEM combo_keys_t
-  f10_combo_1 = {B_1_L2,B_2_L2, COMBO_END},
-  f1_combo_1 = {B_1_L3,B_2_L3, COMBO_END},
-  f2_combo_1 = {B_1_L4,B_2_L4, COMBO_END},
-  f3_combo_1 = {B_1_L5,B_2_L5, COMBO_END},
-  f4_combo_1 = {B_1_L6,B_2_L6, COMBO_END},
+  // left-left 1_1
+  DCS_combo_1 =   {B_1_L2,  B_1_L3, COMBO_END},
+  undo_combo_1 =  {B_1_L4,  B_1_L3, COMBO_END},
+  selAll_combo_1 ={B_1_L4,  B_1_L5, COMBO_END},
+  DCE_combo_1 =   {B_1_L5,  B_1_L6, COMBO_END},
+
+  // right-right 1_1
+  hat_combo_1 =   {B_1_R2,  B_1_R4, COMBO_END},
+  scln_combo_1 =  {B_1_R2,  B_1_R3, COMBO_END},
+  CLN_combo_1 =   {B_1_R4,  B_1_R3, COMBO_END},
+
+  // left-left 1_2
+  f10_combo_1 =   {B_1_L2,  B_2_L2, COMBO_END},
+  f1_combo_1 =    {B_1_L3,  B_2_L3, COMBO_END},
+  f2_combo_1 =    {B_1_L4,  B_2_L4, COMBO_END},
+  f3_combo_1 =    {B_1_L5,  B_2_L5, COMBO_END},
+  f4_combo_1 =    {B_1_L6,  B_2_L6, COMBO_END},
+  f11_combo_1 =   {B_1_L3,  B_2_L2, COMBO_END},
+  copy_combo_1 =  {B_1_L4,  B_2_L3, COMBO_END},
+  paste_combo_1=  {B_1_L4,  B_2_L5, COMBO_END},
+  SLSH_combo_1 =  {B_1_L5,  B_2_L6, COMBO_END},
+
+  // right-right 1_2
+  f5_combo_1 =    {B_1_R1,  B_2_R1, COMBO_END},
+  f6_combo_1 =    {B_1_R2,  B_2_R2, COMBO_END},
+  f7_combo_1 =    {B_1_R3,  B_2_R3, COMBO_END},
+  f8_combo_1 =    {B_1_R4,  B_2_R4, COMBO_END},
+  f9_combo_1 =    {B_1_R5,  B_2_R5, COMBO_END},
+  NLU_combo_1 =   {B_1_R2,  B_2_R1, COMBO_END},
+  PGUP_combo_1 =  {B_1_R3,  B_2_R2, COMBO_END},
+  PGDN_combo_1 =  {B_1_R3,  B_2_R4, COMBO_END},
   
-  f5_combo_1 = {B_1_R1,B_2_R1, COMBO_END},
-  f6_combo_1 = {B_1_R2,B_2_R2, COMBO_END},
-  f7_combo_1 = {B_1_R3,B_2_R3, COMBO_END},
-  f8_combo_1 = {B_1_R4,B_2_R4, COMBO_END},
-  f9_combo_1 = {B_1_R5,B_2_R5, COMBO_END},
-  
-  f11_combo_1 = {B_1_L3,B_2_L2, COMBO_END},
-  copy_combo_1 = {B_1_L4,B_2_L3, COMBO_END},
-  paste_combo_1 = {B_1_L4,B_2_L5, COMBO_END},
-  SLSH_combo_1 = {B_1_L5,B_2_L6, COMBO_END},
-  
-  DCS_combo_1 = {B_1_L2,B_1_L3, COMBO_END},
-  undo_combo_1 = {B_1_L4,B_1_L3, COMBO_END},
-  selAll_combo_1 = {B_1_L4,B_1_L5, COMBO_END},
-  DCE_combo_1 = {B_1_L5,B_1_L6, COMBO_END},
+  // left-left 2_2
+  selLine_combo_1 = {B_2_L2,  B_2_L3, COMBO_END},
+  esc_combo_1 =     {B_2_L4,  B_2_L3, COMBO_END},
+  del_combo_1 =     {B_2_L4,  B_2_L5, COMBO_END},
+  cut_combo_1 =     {B_2_L5,  B_2_L3, COMBO_END},
+  DELwd_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, COMBO_END},
 
-  hat_combo_1 = {B_1_R2,B_1_R4, COMBO_END},
-  scln_combo_1 = {B_1_R2,B_1_R3, COMBO_END},
-  CLN_combo_1 = {B_1_R4,B_1_R3, COMBO_END},
+  // right-right 2_2
+  lng2_combo =      {B_2_R1,  B_2_R2, B_2_R3, COMBO_END},
+  lng1_combo =      {B_2_R1,  B_2_R2, COMBO_END},
+  BKSP_combo_r1 =   {B_2_R2,  B_2_R3, COMBO_END},
+  BKSPwd_combo_1 =  {B_2_R2,  B_2_R3, B_2_R4, COMBO_END},
+  app_combo_1 =     {B_2_R2,  B_2_R4, COMBO_END},
+  dash_combo_1 =    {B_2_R3,  B_2_R4, COMBO_END},
 
-  NLU_combo_1 = {B_1_R2,B_2_R1, COMBO_END},
-  PGUP_combo_1 = {B_1_R3,B_2_R2, COMBO_END},
-  PGDN_combo_1 = {B_1_R3,B_2_R4, COMBO_END},
-  
-  selLine_combo_1 = {B_2_L2,B_2_L3, COMBO_END},
-  esc_combo_1 = {B_2_L4,B_2_L3, COMBO_END},
-  del_combo_1 = {B_2_L4,B_2_L5, COMBO_END},
-  cut_combo_1 = {B_2_L5,B_2_L3, COMBO_END},
-  DELwd_combo_1 = {B_2_L5,B_2_L4,B_2_L3, COMBO_END},
+  // left-left 2_3
+  f12_combo_1 =   {B_2_L4,  B_3_L4, COMBO_END},
+  amp_combo_1 =   {B_2_L5,  B_3_L5, COMBO_END},
+  pipe_combo_1 =  {B_2_L6,  B_3_L6, COMBO_END},
+  // mcRec_combo_1 = {B_2_L2,B_3_L3, COMBO_END},
+  // mcPly_combo_1 = {B_3_L2,B_2_L3, COMBO_END},
+  save_combo_1 =  {B_2_L4,  B_3_L3, COMBO_END},
+  tab_combo_1 =   {B_2_L4,  B_3_L5, COMBO_END},
+  ENT_combo_1 =   {B_2_L5,  B_3_L6, COMBO_END},
 
-  lng2_combo = {B_2_R1 ,B_2_R2 ,B_2_R3 , COMBO_END},
-  lng1_combo = {B_2_R1 ,B_2_R2 , COMBO_END},
-  BKSP_combo_r1 = {B_2_R2,B_2_R3, COMBO_END},
-  BKSPwd_combo_1 = {B_2_R2,B_2_R3,B_2_R4, COMBO_END},
-  app_combo_1 = {B_2_R2,B_2_R4, COMBO_END},
-  dash_combo_1 = {B_2_R3,B_2_R4, COMBO_END},
-
-  f12_combo_1 = {B_2_L4,KC_C, COMBO_END},
-  amp_combo_1 = {KC_V,B_2_L5, COMBO_END},
-  pipe_combo_1 = {KC_L,KC_SLSH, COMBO_END},
-
-  at_combo_1 = {B_2_R1,B_3_R1, COMBO_END},
+  // right-right 2_3
+  at_combo_1 =  {B_2_R1,  B_3_R1, COMBO_END},
   // unds_combo_1 = {B_2_R2,B_3_R1, COMBO_END},
+  NLD_combo_1 = {B_2_R2,  B_3_R1,   COMBO_END},
+  up_combo_1 =  {B_2_R3,  B_3_R2,   COMBO_END},
+  dn_combo_1 =  {B_2_R3,  B_3_R4,   COMBO_END},
 
-  // mcRec_combo_1 = {B_2_L2,KC_X, COMBO_END},
-  // mcPly_combo_1 = {KC_Z,B_2_L3, COMBO_END},
-  save_combo_1 = {B_2_L4,KC_X , COMBO_END},
-  tab_combo_1 = {B_2_L4,KC_V, COMBO_END},
-  ENT_combo_1 = {B_2_L5,KC_SLSH, COMBO_END},
-
-  NLD_combo_1 = {B_3_R1,B_2_R2, COMBO_END},
-  up_combo_1 = {B_2_R3,B_3_R2, COMBO_END},
-  dn_combo_1 = {B_2_R3,B_3_R4, COMBO_END},
-
-  home_combo_1 = {KC_C,KC_X, COMBO_END},
-  end_combo_1 = {KC_V,KC_C, COMBO_END},
-  f7_combo_2 = {KC_V,KC_SLSH, COMBO_END},
-  delAll_combo_1 = {KC_X,KC_C,KC_V, COMBO_END},
+  // left-left 3_3
+  home_combo_1 =    {B_3_L4,  B_3_L3, COMBO_END},
+  end_combo_1 =     {B_3_L5,  B_3_L4, COMBO_END},
+  f7_combo_2 =      {B_3_L5,  B_3_L6, COMBO_END},
+  delAll_combo_1 =  {B_3_L3,  B_3_L4, B_3_L5, COMBO_END},
   
-  f10_combo_2= {B_3_R1,B_3_R2, COMBO_END},
-  lft_combo_1 = {B_3_R2,B_3_R3, COMBO_END},
-  rgt_combo_1 = {B_3_R4,B_3_R3, COMBO_END},
-  lftWd_combo_1 = {B_3_R2,B_3_R3,B_3_R4, COMBO_END},
-  rgtWd_combo_1 = {B_3_R3,B_3_R4,HOM_MS, COMBO_END},
-  unds_combo_1 = {B_3_R2,B_3_R4, COMBO_END};
+  // right-right 3_3
+  f10_combo_2=    {B_3_R1,  B_3_R2, COMBO_END},
+  lft_combo_1 =   {B_3_R2,  B_3_R3, COMBO_END},
+  rgt_combo_1 =   {B_3_R4,  B_3_R3, COMBO_END},
+  lftWd_combo_1 = {B_3_R2,  B_3_R3, B_3_R4, COMBO_END},
+  rgtWd_combo_1 = {B_3_R3,  B_3_R4, B_3_R5, COMBO_END},
+  unds_combo_1 =  {B_3_R2,  B_3_R4, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   // [COMBO_mcrec_1] = COMBO(a_alt_1_combo, DYN_REC_START1),
