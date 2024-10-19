@@ -76,7 +76,7 @@ enum combos {
   COMBO_f11_2,
   COMBO_bSlh_1,
   COMBO_dbSlh_1,
-  COMBO_dslsh_1,
+  COMBO_dSlsh_1,
   COMBO_find_1,
   COMBO_zomP_1,
   COMBO_zomM_1,
