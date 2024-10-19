@@ -98,7 +98,7 @@ static PROGMEM combo_keys_t
   ,selLine_combo_1 ={B_1_L4,  B_1_L5, COMBO_END}
   ,selAll_combo_1 ={B_1_L3,  B_1_L4,  B_1_L5, COMBO_END}
   ,DCE_combo_1 =   {B_1_L5,  B_1_L6, COMBO_END}
-  ,cls_combo_1 =   {B_1_L5,  B_1_L3,  B_1_L4, COMBO_END}, 
+  ,cls_combo_1 =   {B_1_L5,  B_1_L3,  B_1_L4, COMBO_END}
 
   // right-right 1_1
   ,eq_combo_1 =   {B_1_R2,  B_1_R4, COMBO_END}
@@ -125,7 +125,7 @@ static PROGMEM combo_keys_t
   ,PGUP_combo_1 =  {B_1_R3,  B_2_R2, COMBO_END}
   ,PGDN_combo_1 =  {B_1_R3,  B_2_R4, COMBO_END}
   ,SLSH_combo_1 =  {B_1_R4,  B_2_R5, COMBO_END}
-  ,BSLH_combo_1 =  {B_1_R4,  B_2_R3, COMBO_END}, 
+  ,BSLH_combo_1 =  {B_1_R4,  B_2_R3, COMBO_END}
   ,hat_combo_1 =   {B_1_R3,  B_2_R2,  B_2_R4, COMBO_END}
   ,f10_combo_2 =   {B_1_R3,  B_1_R4,  B_2_R2, COMBO_END}
   
@@ -133,7 +133,7 @@ static PROGMEM combo_keys_t
   ,tab_combo_1 = {B_2_L2,  B_2_L3, COMBO_END}
   ,esc_combo_1 =     {B_2_L4,  B_2_L3, COMBO_END}
   ,copy_combo_1 =     {B_2_L4,  B_2_L5, COMBO_END}
-  ,find_combo_1  =     {B_2_L5,  B_2_L3, COMBO_END}, 
+  ,find_combo_1  =     {B_2_L5,  B_2_L3, COMBO_END}
   ,zomP_combo_1  = {B_2_L5,  B_2_L6, COMBO_END}
   ,spc_combo_1 =   {B_2_L2,  B_2_L4, B_2_L3, COMBO_END}
   ,paste_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, COMBO_END}
@@ -147,7 +147,7 @@ static PROGMEM combo_keys_t
   ,dash_combo_1 =     {B_2_R2,  B_2_R4, COMBO_END}
   ,del_combo_1 =    {B_2_R3,  B_2_R4, COMBO_END}
   ,DELwd_combo_1 =  {B_2_R3,  B_2_R4, B_2_R5,  COMBO_END}
-  ,plus_combo_1 =    {B_2_R5,  B_2_R4, COMBO_END},  
+  ,plus_combo_1 =    {B_2_R5,  B_2_R4, COMBO_END}
   ,ENT_combo_1 =    {B_2_R2,  B_2_R3, B_2_R4,  B_2_R5, COMBO_END}
 
   // left-left 2_3
@@ -160,9 +160,9 @@ static PROGMEM combo_keys_t
   ,NLD_combo_1 = {B_2_R2,  B_3_R1,   COMBO_END}
   ,up_combo_1 =  {B_2_R3,  B_3_R2,   COMBO_END}
   ,dn_combo_1 =  {B_2_R3,  B_3_R4,   COMBO_END}
-  ,dSLSH_combo_1 =  {B_2_R4,  B_3_R5, COMBO_END}, 
-  ,dBSLH_combo_1 =  {B_1_R5,  B_2_R4, COMBO_END}, 
-  ,astr_combo_1 =   {B_2_R3,  B_3_R2,  B_3_R4, COMBO_END}, 
+  ,dSLSH_combo_1 =  {B_2_R4,  B_3_R5, COMBO_END}
+  ,dBSLH_combo_1 =  {B_1_R5,  B_2_R4, COMBO_END} 
+  ,astr_combo_1 =   {B_2_R3,  B_3_R2,  B_3_R4, COMBO_END}
   ,f7_combo_2 =  {B_2_R3,  B_2_R4,  B_3_R2, COMBO_END}
 
   // left-left 3_3
