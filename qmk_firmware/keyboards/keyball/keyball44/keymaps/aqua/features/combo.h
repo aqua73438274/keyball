@@ -284,7 +284,7 @@ void process_combo_event(uint16_t combo_index, bool p) {
     case COMBO_close_1: if (p) {SEND_STRING(SS_DOWN(X_LALT)SS_TAP(X_F4)SS_UP(X_LALT));}  break;
     case COMBO_reTrs_1: if (p) {SEND_STRING(SS_DOWN(X_LGUI)SS_TAP(X_SLASH)SS_UP(X_LGUI));}  break;
     case COMBO_dbSlh_1: if (p) {SEND_STRING("..\\");}  break;
-    case COMBO_dSlsh_1: if (p) {SEND_STRING("..\/");}  break;
+    case COMBO_dSlsh_1: if (p) {SEND_STRING("../");}  break;
     case COMBO_zomP_1: if (p) {SEND_STRING(SS_DOWN(X_LCTL)SS_TAP(X_KP_PLUS)SS_UP(X_LCTL));}  break;
     case COMBO_zomM_1: if (p) {SEND_STRING(SS_DOWN(X_LCTL)SS_TAP(X_KP_MINUS)SS_UP(X_LCTL));}  break;
     // End paste from spreadsheet `def 4`
