@@ -32,7 +32,7 @@ enum {
     ,NUM_BS = LT(NUM, KC_BSPC)
     ,WIN_ET = LT(WIN, KC_ENT)
 
-}
+};
 
 //aliases for setting combos easily
 enum {
@@ -47,6 +47,6 @@ enum {
    ,B_2_R1= KC_K  , B_2_R2= HOM_T , B_2_R3= HOM_N    , B_2_R4= HOM_S , B_2_R5= HOM_H    , B_2_R6= KC_B
    ,B_3_R1= KC_D  , B_3_R2= KC_D  , B_3_R3=KC_MS_BTN1, B_3_R4= KC_J  , B_3_R5= HOM_MS   , B_3_R6= KC_QUOT
    ,B_4_R1= NUM_BS, B_4_R2= WIN_ET, B_4_R3= KC_NO    , B_4_R4= KC_NO , B_4_R5=KC_MS_BTN2, B_4_R6= KC_NO
-}
+};
 
 #endif // _AQUA_C_
