@@ -8,6 +8,7 @@ enum layeLs {
   WIN,
   FUN,
   NAV,
+  MOS
 };
 
 // Short aliases for home row mods and other tap-hold keys.
@@ -21,7 +22,7 @@ enum {
     ,HOM_S  = LALT_T(KC_S)
     ,HOM_H  = LT(SYM, KC_H)
     ,HOM_Z  = LGUI_T(KC_Z)
-    ,HOM_MS = RGUI_T(KC_SCLN)
+    ,HOM_MS = LT(SYM,KC_SCLN)
 
     ,NUM_V   = LT(NUM, KC_V)
     ,WIN_AT = LT(WIN, KC_AT)

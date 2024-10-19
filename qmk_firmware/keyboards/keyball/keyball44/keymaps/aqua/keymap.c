@@ -94,6 +94,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   KC_ENT , KC_PGUP, KC_APP , KC_PGDN, XXXXXXX , _______
     ,         _______ , _______, _______, _______, _______
   )
+
+  ,[MOS] = LAYOUT_universal(
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
+    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
+    ,                   _______, _______, _______, _______, _______
+   
+    ,                XXXXXXX   , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
+    ,                KC_MS_BTN5, XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
+    ,                KC_MS_BTN4,KC_MS_BTN3,KC_MS_BTN1,KC_MS_BTN2, XXXXXXX , _______
+    ,         _______ , _______, _______, _______, _______
+  )
 };
 // clang-format on
 
