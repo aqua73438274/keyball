@@ -33,4 +33,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #    define RGBLIGHT_EFFECT_TWINKLE
 // #endif
 
-#define COMBO_COUNT 58
+#define COMBO_COUNT 63

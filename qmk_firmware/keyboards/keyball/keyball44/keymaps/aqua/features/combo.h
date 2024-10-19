@@ -69,6 +69,21 @@ enum combos {
   COMBO_lftwd_1,
   COMBO_rgtwd_1,
   COMBO_app_1,
+  COMBO_redo_1,
+  COMBO_f2_2,
+  COMBO_close_1,
+  COMBO_eq_1,
+  COMBO_f11_2,
+  COMBO_bSlh_1,
+  COMBO_dbSlh_1,
+  COMBO_dslsh_1,
+  COMBO_Find_1,
+  COMBO_zomP_1,
+  COMBO_zomM_1,
+  COMBO_plus_1,
+  COMBO_astr_1,
+//  COMBO_cpWrd_1,
+  COMBO_reTrs_1,
   // End paste from spreadsheet `def 2`
 };
 
@@ -77,14 +92,20 @@ typedef const uint16_t combo_keys_t[];
 static PROGMEM combo_keys_t
   // left-left 1_1
   DCS_combo_1 =   {B_1_L2,  B_1_L3, COMBO_END},
+  redo_combo_1 =   {B_1_L2,  B_1_L3,  B_1_L4, COMBO_END},
+  f2_combo_2 =   {B_1_L2,  B_1_L3,  B_1_L4, B_1_L5, COMBO_END},
   undo_combo_1 =  {B_1_L4,  B_1_L3, COMBO_END},
-  selAll_combo_1 ={B_1_L4,  B_1_L5, COMBO_END},
+  selLine_combo_1 ={B_1_L4,  B_1_L5, COMBO_END},
+  selAll_combo_1 ={B_1_L3,  B_1_L4,  B_1_L5, COMBO_END},
   DCE_combo_1 =   {B_1_L5,  B_1_L6, COMBO_END},
+  cls_combo_1 =   {B_1_L5,  B_1_L3,  B_1_L4, COMBO_END}, 
 
   // right-right 1_1
-  hat_combo_1 =   {B_1_R2,  B_1_R4, COMBO_END},
+  eq_combo_1 =   {B_1_R2,  B_1_R4, COMBO_END},
   scln_combo_1 =  {B_1_R2,  B_1_R3, COMBO_END},
   CLN_combo_1 =   {B_1_R4,  B_1_R3, COMBO_END},
+  app_combo_1 =   {B_1_R5,  B_1_R4, B_1_R3, COMBO_END},
+  f11_combo_2 =   {B_1_R5,  B_1_R4, B_1_R3, B_1_R2, COMBO_END},
 
   // left-left 1_2
   f10_combo_1 =   {B_1_L2,  B_2_L2, COMBO_END},
@@ -93,9 +114,6 @@ static PROGMEM combo_keys_t
   f3_combo_1 =    {B_1_L5,  B_2_L5, COMBO_END},
   f4_combo_1 =    {B_1_L6,  B_2_L6, COMBO_END},
   f11_combo_1 =   {B_1_L3,  B_2_L2, COMBO_END},
-  copy_combo_1 =  {B_1_L4,  B_2_L3, COMBO_END},
-  paste_combo_1=  {B_1_L4,  B_2_L5, COMBO_END},
-  SLSH_combo_1 =  {B_1_L5,  B_2_L6, COMBO_END},
 
   // right-right 1_2
   f5_combo_1 =    {B_1_R1,  B_2_R1, COMBO_END},
@@ -106,52 +124,62 @@ static PROGMEM combo_keys_t
   NLU_combo_1 =   {B_1_R2,  B_2_R1, COMBO_END},
   PGUP_combo_1 =  {B_1_R3,  B_2_R2, COMBO_END},
   PGDN_combo_1 =  {B_1_R3,  B_2_R4, COMBO_END},
+  SLSH_combo_1 =  {B_1_R4,  B_2_R5, COMBO_END},
+  BSLH_combo_1 =  {B_1_R4,  B_2_R3, COMBO_END}, 
+  hat_combo_1 =   {B_1_R3,  B_2_R2,  B_2_R4, COMBO_END},
+  f10_combo_2 =   {B_1_R3,  B_1_R4,  B_2_R2, COMBO_END},
   
   // left-left 2_2
-  selLine_combo_1 = {B_2_L2,  B_2_L3, COMBO_END},
+  tab_combo_1 = {B_2_L2,  B_2_L3, COMBO_END},
   esc_combo_1 =     {B_2_L4,  B_2_L3, COMBO_END},
-  del_combo_1 =     {B_2_L4,  B_2_L5, COMBO_END},
-  cut_combo_1 =     {B_2_L5,  B_2_L3, COMBO_END},
-  DELwd_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, COMBO_END},
+  copy_combo_1 =     {B_2_L4,  B_2_L5, COMBO_END},
+  find_combo_1  =     {B_2_L5,  B_2_L3, COMBO_END}, 
+  zomP_combo_1  tab_combo_1 = {B_2_L5,  B_2_L6, COMBO_END},
+  COMBO_spc_1 =   {B_2_L2,  B_2_L4, B_2_L3, COMBO_END},
+  paste_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, COMBO_END},
+  save_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, B_2_L2, COMBO_END},
 
   // right-right 2_2
-  lng2_combo =      {B_2_R1,  B_2_R2, B_2_R3, COMBO_END},
-  lng1_combo =      {B_2_R1,  B_2_R2, COMBO_END},
+  delAll_combo_1 =      {B_2_R1,  B_2_R2, B_2_R3, COMBO_END},
+  home_combo_1 =      {B_2_R1,  B_2_R2, COMBO_END},
   BKSP_combo_r1 =   {B_2_R2,  B_2_R3, COMBO_END},
   BKSPwd_combo_1 =  {B_2_R2,  B_2_R3, B_2_R4, COMBO_END},
-  app_combo_1 =     {B_2_R2,  B_2_R4, COMBO_END},
-  dash_combo_1 =    {B_2_R3,  B_2_R4, COMBO_END},
+  dash_combo_1 =     {B_2_R2,  B_2_R4, COMBO_END},
+  del_combo_1 =    {B_2_R3,  B_2_R4, COMBO_END},
+  DELwd_combo_1 =  {B_2_R3,  B_2_R4, B_2_R5,  COMBO_END},
+  plus_combo_1 =    {B_2_R5,  B_2_R4, COMBO_END},  
+  ENT_combo_1 =    {B_2_R2,  B_2_R3, B_2_R4,  B_2_R5, COMBO_END},
 
   // left-left 2_3
   f12_combo_1 =   {B_2_L4,  B_3_L4, COMBO_END},
   amp_combo_1 =   {B_2_L5,  B_3_L5, COMBO_END},
   pipe_combo_1 =  {B_2_L6,  B_3_L6, COMBO_END},
-  // mcRec_combo_1 = {B_2_L2,B_3_L3, COMBO_END},
-  // mcPly_combo_1 = {B_3_L2,B_2_L3, COMBO_END},
-  save_combo_1 =  {B_2_L4,  B_3_L3, COMBO_END},
-  tab_combo_1 =   {B_2_L4,  B_3_L5, COMBO_END},
-  ENT_combo_1 =   {B_2_L5,  B_3_L6, COMBO_END},
 
   // right-right 2_3
   at_combo_1 =  {B_2_R1,  B_3_R1, COMBO_END},
-  // unds_combo_1 = {B_2_R2,B_3_R1, COMBO_END},
   NLD_combo_1 = {B_2_R2,  B_3_R1,   COMBO_END},
   up_combo_1 =  {B_2_R3,  B_3_R2,   COMBO_END},
   dn_combo_1 =  {B_2_R3,  B_3_R4,   COMBO_END},
+  dSLSH_combo_1 =  {B_2_R4,  B_3_R5, COMBO_END}, 
+  dBSLH_combo_1 =  {B_1_R5,  B_2_R4, COMBO_END}, 
+  astr_combo_1 =   {B_2_R3,  B_3_R2,  B_3_R4, COMBO_END}, 
+  f7_combo_2 =  {B_2_R3,  B_2_R4,  B_3_R2, COMBO_END},
 
   // left-left 3_3
-  home_combo_1 =    {B_3_L4,  B_3_L3, COMBO_END},
-  end_combo_1 =     {B_3_L5,  B_3_L4, COMBO_END},
-  f7_combo_2 =      {B_3_L5,  B_3_L6, COMBO_END},
-  delAll_combo_1 =  {B_3_L3,  B_3_L4, B_3_L5, COMBO_END},
+  lng1_combo =    {B_3_L4,  B_3_L3, COMBO_END},
+  cut_combo_1 =     {B_3_L5,  B_3_L4, COMBO_END},
+  zomM_combo_1 =      {B_3_L5,  B_3_L6, COMBO_END},
+  cpWrd_combo =  {B_3_L3, B_3_L5, COMBO_END},
+  lng2_combo =  {B_3_L3,  B_3_L4, B_3_L5, COMBO_END},
   
   // right-right 3_3
-  f10_combo_2=    {B_3_R1,  B_3_R2, COMBO_END},
+  end_combo_1=    {B_3_R1,  B_3_R2, COMBO_END},
   lft_combo_1 =   {B_3_R2,  B_3_R3, COMBO_END},
   rgt_combo_1 =   {B_3_R4,  B_3_R3, COMBO_END},
   lftWd_combo_1 = {B_3_R2,  B_3_R3, B_3_R4, COMBO_END},
   rgtWd_combo_1 = {B_3_R3,  B_3_R4, B_3_R5, COMBO_END},
   unds_combo_1 =  {B_3_R2,  B_3_R4, COMBO_END};
+  reTrs_combo_1 = {B_3_R2,  B_3_R3,  B_3_R4, B_3_R5, COMBO_END},
 
 combo_t key_combos[COMBO_COUNT] = {
   // [COMBO_mcrec_1] = COMBO(a_alt_1_combo, DYN_REC_START1),
@@ -203,7 +231,7 @@ combo_t key_combos[COMBO_COUNT] = {
   [COMBO_pgdn_1] = COMBO(PGDN_combo_1, KC_PGDN),
   [COMBO_pgup_1] = COMBO(PGUP_combo_1, KC_PGUP),
   [COMBO_cln_1] = COMBO(CLN_combo_1, KC_COLN),
-  // [COMBO_spc_1] = COMBO(spc_combo_1, KC_SPC),
+  [COMBO_spc_1] = COMBO(spc_combo_1, KC_SPC),
   [COMBO_f11_1] = COMBO(f11_combo_1, KC_F11),
   [COMBO_undo_1] = COMBO_ACTION(undo_combo_1),
   [COMBO_hat_1] = COMBO(hat_combo_1, KC_CIRC),
@@ -214,6 +242,21 @@ combo_t key_combos[COMBO_COUNT] = {
   [COMBO_f10_1] = COMBO(f10_combo_1, KC_F10),
   [COMBO_f10_2] = COMBO(f10_combo_2, KC_F10),
   [COMBO_dcs_1] = COMBO_ACTION(DCS_combo_1),
+  [COMBO_undo_1] = COMBO_ACTION(redo_combo_1),
+  [COMBO_f2_2] = COMBO(f8_combo_1, KC_F2),
+  [COMBO_close_1] = COMBO_ACTION(cls_combo_1),
+  [COMBO_eq_1] = COMBO(lng2_combo, KC_EQL),
+  [COMBO_f11_2] = COMBO(f10_combo_1, KC_F11),
+  [COMBO_bSlh_1] = COMBO(f10_combo_2, KC_BSLS),
+  [COMBO_dbSlh_1] = COMBO_ACTION(dBSLH_combo_1),
+  [COMBO_dSlsh_1] = COMBO_ACTION(dSLSH_combo_1),
+  [COMBO_find_1] = COMBO_ACTION(find_combo_1),
+  [COMBO_zomP_1] = COMBO_ACTION(zomP_combo_1),
+  [COMBO_zomM_1] = COMBO_ACTION(zomM_combo_1),
+  [COMBO_plus_1] = COMBO(f10_combo_1, KC_PLUS),
+  [COMBO_astr_1] = COMBO(f10_combo_2, KC_ASTR),
+// [COMBO_cpWrd_1] = COMBO(f10_combo_1, KC_F10),//
+  [COMBO_reTrs_1] = COMBO_ACTION(COMBO_reTrs_1),
   // End paste from spreadsheet `def 3`
 };
 
@@ -236,6 +279,14 @@ void process_combo_event(uint16_t combo_index, bool p) {
     case COMBO_selLine_1: if (p) {SEND_STRING(SS_TAP(X_END)SS_DOWN(X_LSFT)SS_TAP(X_HOME)SS_UP(X_LSFT));}  break;
     case COMBO_undo_1: if (p) {SEND_STRING(SS_LCTL("z"));}  break;
     case COMBO_dcs_1: if (p) {SEND_STRING(SS_DOWN(X_LCTL)SS_TAP(X_HOME)SS_UP(X_LCTL));}  break;
+    case COMBO_redo_1: if (p) {SEND_STRING(SS_LCTL("y"));}  break;
+    case COMBO_find_1: if (p) {SEND_STRING(SS_LCTL("f"));}  break;
+    case COMBO_close_1: if (p) {SEND_STRING(SS_LALT(X_F4));}  break;
+    case COMBO_reTrs_1: if (p) {SEND_STRING(SS_LGUI(X_SLASH));}  break;
+    case COMBO_dbSlh_1: if (p) {SEND_STRING_DELAY("..\", TAP_CODE_DELAY);}  break;
+    case COMBO_dSlsh_1: if (p) {SEND_STRING_DELAY("../", TAP_CODE_DELAY);}  break;
+    case COMBO_zomP_1: if (p) {SEND_STRING(SS_LCTL(X_KP_PLUS));}  break;
+    case COMBO_zomM_1: if (p) {SEND_STRING(SS_LCTL(X_KP_MINUS));}  break;
     // End paste from spreadsheet `def 4`
   }
 };
