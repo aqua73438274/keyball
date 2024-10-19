@@ -43,10 +43,10 @@ enum {
    ,B_4_L1= KC_NO , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4= KC_LGUI , B_4_L5= SFT_SP, B_4_L6= NUM_MN
 
     //Right
-   ,B_1_R1= KC_F  , B_1_R2= KC_W  , B_1_R3= KC_M      , B_1_R4= KC_R  , B_1_R5= KC_P      , B_1_R6= KC_GRAVE
-   ,B_2_R1= KC_K  , B_2_R2= HOM_T , B_2_R3= HOM_N     , B_2_R4= HOM_S , B_2_R5= HOM_H     , B_2_R6= KC_B
-   ,B_3_R1= KC_D  , B_3_R2= KC_D  , B_3_R3=KC_MS_BTN1 , B_3_R4= KC_J  , B_3_R5= HOM_MS    , B_3_R6= KC_QUOT
-   ,B_4_R1= NUM_BS, B_4_R2= WIN_ET, B_4_R3= KC_NO     , B_4_R4= KC_NO , B_4_R5=KC_MS_BTN2 , B_4_R6= KC_NO
+   ,B_1_R1= KC_F  , B_1_R2= KC_W  , B_1_R3= KC_M      , B_1_R4= KC_R  , B_1_R5= KC_P       , B_1_R6= KC_GRAVE
+   ,B_2_R1= KC_K  , B_2_R2= HOM_T , B_2_R3= HOM_N     , B_2_R4= HOM_S , B_2_R5= HOM_H      , B_2_R6= KC_B
+   ,B_3_R1= KC_D  , B_3_R2= KC_D  , B_3_R3= KC_MS_BTN1, B_3_R4= KC_J  , B_3_R5= HOM_MS     , B_3_R6= KC_QUOT
+   ,B_4_R1= NUM_BS, B_4_R2= WIN_ET, B_4_R3= KC_NO     , B_4_R4= KC_NO , B_4_R5= KC_MS_BTN2 , B_4_R6= KC_NO
 };
 
 #endif // _AQUA_C_

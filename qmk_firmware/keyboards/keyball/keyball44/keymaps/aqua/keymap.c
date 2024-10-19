@@ -34,19 +34,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   B_2_R1 , B_2_R2 , B_2_R3 , B_2_R4 , B_2_R5 , B_2_R6
     ,                   B_3_R1 , B_3_R2 , B_3_R3 , B_3_R4 , B_3_R5 , B_3_R6
     ,          B_4_R1 , B_4_R2 , KC_NO  , KC_NO  , B_4_R5
-  ),
+  )
 
-  [SYM] = LAYOUT_universal(
-      RGB_TOG  , _______  , _______  , _______  , _______  , _______ 
-    , RGB_MOD  , RGB_HUI  , RGB_SAI  , RGB_VAI  , _______  , SCRL_DVI 
-    , RGB_RMOD , RGB_HUD  , RGB_SAD  , RGB_VAD  , _______  , SCRL_DVD
-    ,                       QK_BOOT  , KBC_RST  , _______  , _______  , _______     
+  ,[SYM] = LAYOUT_universal(
+      _______, _______, KC_LABK, KC_RABK, KC_BSLS, KC_GRV 
+    , _______, KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
+    , _______, _______, KC_SLSH, KC_ASTR, KC_CIRC, _______
+    ,                   _______, _______, _______, _______, _______     
    
-    ,                      RGB_M_P  , RGB_M_B  , RGB_M_R  , RGB_M_SW , RGB_M_SN , RGB_M_K  ,
-    ,                      RGB_M_X  , RGB_M_G  , RGB_M_T  , RGB_M_TW , _______  , _______  ,
-    ,                      CPI_D1K  , CPI_D100 , CPI_I100 , CPI_I1K  , _______  , KBC_SAVE ,
-    ,            _______ ,  _______ , _______  , KBC_RST  , QK_BOOT
-  ),
+    ,                   KC_AMPR, _______, KC_LBRC, KC_RBRC, _______, _______
+    ,                   KC_PIPE, KC_COLN, KC_LPRN, KC_RPRN, KC_PERC, _______
+    ,                   KC_TILD, KC_DLR , KC_LCBR, KC_RCBR, _______, _______
+    ,         _______ , _______, _______, _______, _______
+  )
 };
 // clang-format on
 
