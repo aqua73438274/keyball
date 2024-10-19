@@ -134,7 +134,7 @@ static PROGMEM combo_keys_t
   esc_combo_1 =     {B_2_L4,  B_2_L3, COMBO_END},
   copy_combo_1 =     {B_2_L4,  B_2_L5, COMBO_END},
   find_combo_1  =     {B_2_L5,  B_2_L3, COMBO_END}, 
-  zomP_combo_1  tab_combo_1 = {B_2_L5,  B_2_L6, COMBO_END},
+  zomP_combo_1  = {B_2_L5,  B_2_L6, COMBO_END},
   COMBO_spc_1 =   {B_2_L2,  B_2_L4, B_2_L3, COMBO_END},
   paste_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, COMBO_END},
   save_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, B_2_L2, COMBO_END},
