@@ -82,8 +82,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F11 , XXXXXXX
     ,                   XXXXXXX, KC_F7  , KC_F6  , KC_F5  , KC_F12 , _______
     ,         _______ , _______, _______, _______, _______
-  )
 
+  ,[NAV] = LAYOUT_universal(
+      _______, XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX
+    , _______, KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END
+    , _______, KC_LGUI, KC_ENT , KC_PGUP, KC_APP , KC_PGDN
+    ,                   _______, _______, _______, _______, _______
+   
+    ,                   XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX , XXXXXXX
+    ,                   KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END  , XXXXXXX
+    ,                   KC_ENT , KC_PGUP, KC_APP , KC_PGDN, XXXXXXX , _______
+    ,         _______ , _______, _______, _______, _______
+  )
 };
 // clang-format on
 
