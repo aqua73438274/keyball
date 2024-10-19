@@ -98,7 +98,7 @@ static PROGMEM combo_keys_t
   ,selLine_combo_1 ={B_1_L4,  B_1_L5, COMBO_END}
   ,selAll_combo_1 ={B_1_L3,  B_1_L4,  B_1_L5, COMBO_END}
   ,DCE_combo_1 =   {B_1_L5,  B_1_L6, COMBO_END}
-  ,cls_combo_1 =   {B_1_L5,  B_1_L3,  B_1_L4, COMBO_END}
+  ,cls_combo_1 =   {B_1_L5,  B_1_L6,  B_1_L4, COMBO_END}
 
   // right-right 1_1
   ,eq_combo_1 =   {B_1_R2,  B_1_R4, COMBO_END}
@@ -166,11 +166,11 @@ static PROGMEM combo_keys_t
   ,f7_combo_2 =  {B_2_R3,  B_2_R4,  B_3_R2, COMBO_END}
 
   // left-left 3_3
-  ,lng1_combo =    {B_3_L4,  B_3_L3, COMBO_END}
-  ,cut_combo_1 =     {B_3_L5,  B_3_L4, COMBO_END}
-  ,zomM_combo_1 =      {B_3_L5,  B_3_L6, COMBO_END}
-  ,cpWrd_combo =  {B_3_L3, B_3_L5, COMBO_END}
-  ,lng2_combo =  {B_3_L3,  B_3_L4, B_3_L5, COMBO_END}
+  ,lng1_combo =   {B_3_L4,  B_3_L3, COMBO_END}
+  ,cut_combo_1 =  {B_3_L5,  B_3_L4, COMBO_END}
+  ,zomM_combo_1 = {B_3_L5,  B_3_L6, COMBO_END}
+//  ,cpWrd_combo =  {B_3_L3, B_3_L5, COMBO_END}
+  ,lng2_combo =   {B_3_L3,  B_3_L4, B_3_L5, COMBO_END}
   
   // right-right 3_3
   ,end_combo_1=    {B_3_R1,  B_3_R2, COMBO_END}
@@ -246,7 +246,7 @@ combo_t key_combos[COMBO_COUNT] = {
   ,[COMBO_redo_1] = COMBO_ACTION(redo_combo_1)
   ,[COMBO_f2_2] = COMBO(f8_combo_1, KC_F2)
   ,[COMBO_close_1] = COMBO_ACTION(cls_combo_1)
-  ,[COMBO_eq_1] = COMBO(lng2_combo, KC_EQL)
+  ,[COMBO_eq_1] = COMBO(eq_combo_1, KC_EQL)
   ,[COMBO_f11_2] = COMBO(f11_combo_2, KC_F11)
   ,[COMBO_bSlh_1] = COMBO(BSLH_combo_1, KC_BSLS)
   ,[COMBO_dbSlh_1] = COMBO_ACTION(dBSLH_combo_1)
