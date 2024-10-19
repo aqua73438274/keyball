@@ -84,6 +84,7 @@ enum combos {
   COMBO_astr_1,
 //  COMBO_cpWrd_1,
   COMBO_reTrs_1,
+  COMBO_clbd_1,
   // End paste from spreadsheet `def 2`
 };
 
@@ -114,6 +115,7 @@ static PROGMEM combo_keys_t
   ,f3_combo_1 =    {B_1_L5,  B_2_L5, COMBO_END}
   ,f4_combo_1 =    {B_1_L6,  B_2_L6, COMBO_END}
   ,f11_combo_1 =   {B_1_L3,  B_2_L2, COMBO_END}
+  ,save_combo_1 =  {B_1_L4,  B_2_L5, COMBO_END}
 
   // right-right 1_2
   ,f5_combo_1 =    {B_1_R1,  B_2_R1, COMBO_END}
@@ -133,11 +135,10 @@ static PROGMEM combo_keys_t
   ,tab_combo_1 = {B_2_L2,  B_2_L3, COMBO_END}
   ,esc_combo_1 =     {B_2_L4,  B_2_L3, COMBO_END}
   ,copy_combo_1 =     {B_2_L4,  B_2_L5, COMBO_END}
-  ,find_combo_1  =     {B_2_L5,  B_2_L3, COMBO_END}
+  ,clbd_combo_1  =     {B_2_L5,  B_2_L3, COMBO_END}
   ,zomP_combo_1  = {B_2_L5,  B_2_L6, COMBO_END}
   ,spc_combo_1 =   {B_2_L2,  B_2_L4, B_2_L3, COMBO_END}
   ,paste_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, COMBO_END}
-  ,save_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, B_2_L2, COMBO_END}
 
   // right-right 2_2
   ,delAll_combo_1 =      {B_2_R1,  B_2_R2, B_2_R3, COMBO_END}
@@ -147,13 +148,14 @@ static PROGMEM combo_keys_t
   ,dash_combo_1 =     {B_2_R2,  B_2_R4, COMBO_END}
   ,del_combo_1 =    {B_2_R3,  B_2_R4, COMBO_END}
   ,DELwd_combo_1 =  {B_2_R3,  B_2_R4, B_2_R5,  COMBO_END}
-  ,plus_combo_1 =    {B_2_R5,  B_2_R4, COMBO_END}
-  ,ENT_combo_1 =    {B_2_R2,  B_2_R3, B_2_R4,  B_2_R5, COMBO_END}
+  ,plus_combo_1 =    {B_2_R5,  B_2_R3 , COMBO_END}
+  ,ENT_combo_1 =    {B_2_R4,  B_2_R5, COMBO_END}
 
   // left-left 2_3
   ,f12_combo_1 =   {B_2_L4,  B_3_L4, COMBO_END}
   ,amp_combo_1 =   {B_2_L5,  B_3_L5, COMBO_END}
   ,pipe_combo_1 =  {B_2_L6,  B_3_L6, COMBO_END}
+  ,find_combo_1  = {B_2_L4,  B_3_L5, COMBO_END}
 
   // right-right 2_3
   ,at_combo_1 =  {B_2_R1,  B_3_R1, COMBO_END}
@@ -258,6 +260,7 @@ combo_t key_combos[COMBO_COUNT] = {
   ,[COMBO_astr_1] = COMBO(astr_combo_1, KC_ASTR)
 //, [COMBO_cpWrd_1] = COMBO(f10_combo_1, KC_F10)//
   ,[COMBO_reTrs_1] = COMBO_ACTION(reTrs_combo_1)
+  ,[COMBO_clbd_1] = COMBO_ACTION(clbd_combo_1)
   // End paste from spreadsheet `def 3`
 };
 
@@ -288,6 +291,7 @@ void process_combo_event(uint16_t combo_index, bool p) {
     case COMBO_dSlsh_1: if (p) {SEND_STRING("../");}  break;
     case COMBO_zomP_1: if (p) {SEND_STRING(SS_DOWN(X_LCTL)SS_TAP(X_KP_PLUS)SS_UP(X_LCTL));}  break;
     case COMBO_zomM_1: if (p) {SEND_STRING(SS_DOWN(X_LCTL)SS_TAP(X_KP_MINUS)SS_UP(X_LCTL));}  break;
+    case COMBO_clbd_1: if (p) {SEND_STRING(SS_LGUI("v"));}  break;
     // End paste from spreadsheet `def 4`
   }
 };
