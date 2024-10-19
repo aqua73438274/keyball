@@ -184,7 +184,7 @@ static PROGMEM combo_keys_t
 
 combo_t key_combos[COMBO_COUNT] = {
   // [COMBO_mcrec_1] = COMBO(a_alt_1_combo, DYN_REC_START1)
-  ,[COMBO_bksp_1] = COMBO(BKSP_combo_r1, KC_BSPC)
+   [COMBO_bksp_1] = COMBO(BKSP_combo_r1, KC_BSPC)
   ,[COMBO_home_1] = COMBO(home_combo_1, KC_HOME)
   ,[COMBO_delall_1] = COMBO_ACTION(delAll_combo_1)
   ,[COMBO_scln_1] = COMBO(scln_combo_1, KC_SCLN)
