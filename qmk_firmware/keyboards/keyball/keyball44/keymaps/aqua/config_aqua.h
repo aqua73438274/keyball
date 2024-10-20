@@ -24,8 +24,8 @@ enum {
     ,HOM_S  = LALT_T(KC_S)
     ,HOM_H  = LT(SYM, KC_H)
     ,HOM_Z  = LGUI_T(KC_Z)
-    ,HOM_MS = LT(SYM,KC_SCLN)
-#else
+    ,HOM_MS = LT(WIN,KC_SCLN)
+#else;
     //For qwerty
      HOM_A  = LT(SYM, KC_A)
     ,HOM_S  = LALT_T(KC_S)
@@ -36,7 +36,7 @@ enum {
     ,HOM_L  = LALT_T(KC_L)
     ,HOM_SC = LT(SYM, KC_SCLN)
     ,HOM_Z  = LGUI_T(KC_Z)
-    ,HOM_BL = LT(SYM,KC_BSLS)
+    ,HOM_BL = LT(WIN,KC_BSLS)
 #endif
 
     ,NUM_V   = LT(NUM, KC_V)
@@ -47,7 +47,7 @@ enum {
     ,SFT_SP  = LSFT_T(KC_SPC)
     ,NUM_MN  = LT(NUM, KC_MINS)
     ,NUM_BS = LT(NUM, KC_BSPC)
-    ,WIN_ET = LT(WIN, KC_ENT)
+    ,NAV_ET = LT(NAV, KC_ENT)
 
 
 
@@ -66,7 +66,7 @@ enum {
    ,B_1_R1= KC_F  , B_1_R2= KC_W  , B_1_R3= KC_M      , B_1_R4= KC_R  , B_1_R5= KC_P       , B_1_R6= KC_GRAVE
    ,B_2_R1= KC_K  , B_2_R2= HOM_T , B_2_R3= HOM_N     , B_2_R4= HOM_S , B_2_R5= HOM_H      , B_2_R6= KC_B
    ,B_3_R1= KC_G  , B_3_R2= KC_D  , B_3_R3= KC_MS_BTN1, B_3_R4= KC_J  , B_3_R5= HOM_MS     , B_3_R6= KC_QUOT
-   ,B_4_R1= NUM_BS, B_4_R2= WIN_ET, B_4_R3= KC_NO     , B_4_R4= KC_NO , B_4_R5= KC_MS_BTN2 , B_4_R6= KC_NO
+   ,B_4_R1= NUM_BS, B_4_R2= NAV_ET, B_4_R3= KC_NO     , B_4_R4= KC_NO , B_4_R5= KC_MS_BTN2 , B_4_R6= KC_NO
 };
 #else
 enum {
@@ -80,7 +80,7 @@ enum {
    ,B_1_R1= KC_Y  , B_1_R2= KC_U  , B_1_R3= KC_I      , B_1_R4= KC_O     , B_1_R5= KC_P       , B_1_R6= KC_INT3
    ,B_2_R1= KC_H  , B_2_R2= HOM_J , B_2_R3= HOM_K     , B_2_R4= HOM_L    , B_2_R5= HOM_SC     , B_2_R6= KC_QUOT
    ,B_3_R1= KC_N  , B_3_R2= KC_M  , B_3_R3= KC_MS_BTN1, B_3_R4=KC_MS_BTN2, B_3_R5= HOM_BL     , B_3_R6= KC_SLSH
-   ,B_4_R1= NUM_BS, B_4_R2= WIN_ET, B_4_R3= KC_NO     , B_4_R4= KC_NO    , B_4_R5= KC_MS_BTN2 , B_4_R6= KC_NO
+   ,B_4_R1= NUM_BS, B_4_R2= NAV_ET, B_4_R3= KC_NO     , B_4_R4= KC_NO    , B_4_R5= KC_MS_BTN2 , B_4_R6= KC_NO
 };
 #endif
 

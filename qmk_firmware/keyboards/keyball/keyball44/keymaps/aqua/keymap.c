@@ -37,15 +37,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
   ,[SYM] = LAYOUT_universal(
-      MO(FUN), MO(FUN), KC_LABK, KC_RABK, KC_BSLS, KC_GRV 
-    , _______, KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
+      _______, XXXXXXX, KC_LABK, KC_RABK, KC_BSLS, KC_GRV 
+    , MO(FUN), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
     , _______, _______, KC_SLSH, KC_ASTR, KC_CIRC, _______
     ,                   _______, _______, _______, _______, _______
    
     ,                   KC_AMPR, _______, KC_LBRC, KC_RBRC, _______, _______
     ,                   KC_PIPE, KC_COLN, KC_LPRN, KC_RPRN, KC_PERC, _______
     ,                   KC_TILD, KC_DLR , KC_LCBR, KC_RCBR, _______, _______
-    ,         _______ , _______, _______, _______, _______
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
   )
 
   ,[NUM] = LAYOUT_universal(
@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   KC_TAB , KC_8   , KC_9   , KC_4   , KC_PLUS, KC_SLSH
     ,                   KC_COLN, KC_1   , KC_2   , KC_3   , KC_MINS, KC_ASTR
     ,                   KC_COMM, KC_7   , KC_6   , KC_5   , KC_DOT , _______
-    ,         _______ , _______, _______, _______, _______
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
   )
 
   ,[WIN] = LAYOUT_universal(
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   XXXXXXX, KC_F8  , KC_F9  , KC_F4  , KC_F10 , XXXXXXX
     ,                   XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F11 , XXXXXXX
     ,                   XXXXXXX, KC_F7  , KC_F6  , KC_F5  , KC_F12 , _______
-    ,         _______ , _______, _______, _______, _______
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
   )
 
   ,[NAV] = LAYOUT_universal(
@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX , XXXXXXX
     ,                   KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END  , XXXXXXX
     ,                   KC_ENT , KC_PGUP, KC_APP , KC_PGDN, XXXXXXX , _______
-    ,         _______ , _______, _______, _______, _______
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
   )
 
   ,[MOS] = LAYOUT_universal(
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                XXXXXXX   , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
     ,                KC_MS_BTN5, XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
     ,                KC_MS_BTN4,KC_MS_BTN3,KC_MS_BTN1,KC_MS_BTN2, XXXXXXX , _______
-    ,         _______ , _______, _______, _______, _______
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
   )
 };
 // clang-format on

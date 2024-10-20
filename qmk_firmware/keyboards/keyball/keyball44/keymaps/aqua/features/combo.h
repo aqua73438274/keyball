@@ -105,7 +105,7 @@ static PROGMEM combo_keys_t
   ,eq_combo_1 =   {B_1_R2,  B_1_R4, COMBO_END}
   ,scln_combo_1 =  {B_1_R2,  B_1_R3, COMBO_END}
   ,CLN_combo_1 =   {B_1_R4,  B_1_R3, COMBO_END}
-  ,app_combo_1 =   {B_1_R5,  B_1_R4, B_1_R3, COMBO_END}
+  ,app_combo_1 =   {B_1_R2,  B_1_R4, B_1_R3, COMBO_END}
   ,f11_combo_2 =   {B_1_R5,  B_1_R4, B_1_R3, B_1_R2, COMBO_END}
 
   // left-left 1_2

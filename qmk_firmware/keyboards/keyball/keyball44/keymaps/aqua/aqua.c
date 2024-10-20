@@ -32,7 +32,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
   // レイヤーが1または3の場合、スクロールモードが有効になる
-  keyball_set_scroll_mode(get_highest_layer(state) == 1 || get_highest_layer(state) == MOS);
+  keyball_set_scroll_mode(get_highest_layer(state) == 1 || get_highest_layer(state) == WIN);
   // keyball_set_scroll_mode(get_highest_layer(state) == 1);
 
   // レイヤーとLEDを連動させる
