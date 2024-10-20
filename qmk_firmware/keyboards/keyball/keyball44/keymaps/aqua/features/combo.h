@@ -126,8 +126,8 @@ static PROGMEM combo_keys_t
   ,NLU_combo_1 =   {B_1_R2,  B_2_R1, COMBO_END}
   ,PGUP_combo_1 =  {B_1_R3,  B_2_R2, COMBO_END}
   ,PGDN_combo_1 =  {B_1_R3,  B_2_R4, COMBO_END}
-  ,SLSH_combo_1 =  {B_1_R4,  B_2_R5, COMBO_END}
-  ,BSLH_combo_1 =  {B_1_R4,  B_2_R3, COMBO_END}
+  ,BSLH_combo_1 =  {B_1_R4,  B_2_R5, COMBO_END}
+  ,SLSH_combo_1 =  {B_1_R4,  B_2_R3, COMBO_END}
   ,hat_combo_1 =   {B_1_R3,  B_2_R2,  B_2_R4, COMBO_END}
   ,f10_combo_2 =   {B_1_R3,  B_1_R4,  B_2_R2, COMBO_END}
   
@@ -213,7 +213,7 @@ combo_t key_combos[COMBO_COUNT] = {
   ,[COMBO_bkspwd_1] = COMBO_ACTION(BKSPwd_combo_1)
   ,[COMBO_nld_1] = COMBO_ACTION(NLD_combo_1)
   ,[COMBO_unds_1] = COMBO(unds_combo_1, KC_UNDS)
-  ,[COMBO_slsh_1] = COMBO(SLSH_combo_1, KC_INT1)
+  ,[COMBO_slsh_1] = COMBO(SLSH_combo_1, KC_SLSH)
   ,[COMBO_dce_1] = COMBO_ACTION(DCE_combo_1)
   ,[COMBO_f3_1] = COMBO(f3_combo_1, KC_F3)
   ,[COMBO_f9_1] = COMBO(f9_combo_1, KC_F9)
