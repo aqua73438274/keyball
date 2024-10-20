@@ -64,8 +64,8 @@ enum {
     //Right
    ,                B_1_R1= KC_F  , B_1_R2= KC_W  , B_1_R3= KC_M      , B_1_R4= KC_R  , B_1_R5= KC_P     , B_1_R6= KC_GRAVE
    ,                B_2_R1= KC_K  , B_2_R2= HOM_T , B_2_R3= HOM_N     , B_2_R4= HOM_S , B_2_R5= HOM_H    , B_2_R6= KC_B
-   ,B_3_R1=KC_LNG1, B_3_R2= KC_G  , B_3_R3= KC_D  , B_3_R4= KC_MS_BTN1, B_3_R5= KC_J  , B_3_R6= HOM_MS   , B_3_R7= KC_QUOT
-   ,B_4_R1= NUM_BS, B_4_R2= NAV_ET, B_4_R3= KC_NO , B_4_R4= KC_NO     , B_4_R5= KC_NO , B_4_R6=KC_MS_BTN2, B_4_R7= KC_NO
+   ,B_3_R0=KC_LNG1, B_3_R1= KC_G  , B_3_R2= KC_D  , B_3_R3= KC_MS_BTN1, B_3_R4= KC_J  , B_3_R5= HOM_MS   , B_3_R6= KC_QUOT
+   ,B_4_R0= NUM_BS, B_4_R1= NAV_ET, B_4_R2= KC_NO , B_4_R3= KC_NO     , B_4_R4= KC_NO , B_4_R5=KC_MS_BTN2, B_4_R6= KC_NO
 };
 #else
 enum {
