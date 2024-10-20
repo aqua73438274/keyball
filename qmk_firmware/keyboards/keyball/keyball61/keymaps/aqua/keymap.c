@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[SYM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-      KC_ESC ,G(KC_TAB),KC_F2  , KC_F3  , KC_F4  , KC_F5 
+    , _______, XXXXXXX, KC_LABK, KC_RABK, KC_BSLS, KC_GRV
     , MO(FUN), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
     , _______, _______, KC_SLSH, KC_ASTR, KC_CIRC, _______, _______
     , _______, _______, _______, _______, _______, _______, _______
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[NUM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
     , _______, _______, _______, _______, _______, TO(BASE), _______
@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[WIN] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
     , _______, _______,  _______, _______, _______, _______, _______
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[FUN] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-      OUT_TOG, AML_TO , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    , OUT_TOG, AML_TO , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
     , _______, _______, _______, _______, _______, TO(BASE), _______
@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[NAV] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
     , _______, _______,  KC_LEFT, KC_RGHT,C(KC_PGUP), _______,C(KC_PGDN)
@@ -110,7 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[MOS] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
     , _______, _______, _______, _______, _______, _______, _______
