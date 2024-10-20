@@ -8,12 +8,11 @@
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  ...
 
   if (!is_jis_mode()) {
     return true;
   }
-
+  
   return process_record_user_a2j(keycode, record);
 }
 
