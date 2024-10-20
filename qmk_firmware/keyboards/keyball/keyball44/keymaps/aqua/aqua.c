@@ -30,6 +30,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return process_record_user_a2j(keycode, record);
 }
 
+void pointing_device_init_user(void) {
+    set_auto_mouse_layer(MOS);
+    set_auto_mouse_enable(true);
+}
+
 layer_state_t layer_state_set_user(layer_state_t state) {
   // レイヤーが1または3の場合、スクロールモードが有効になる
   keyball_set_scroll_mode(get_highest_layer(state) == 1 || get_highest_layer(state) == WIN);
