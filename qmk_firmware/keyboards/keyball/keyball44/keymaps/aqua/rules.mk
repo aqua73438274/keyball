@@ -9,5 +9,6 @@ OLED_ENABLE = no
 
 # aqua settings
 COMBO_ENABLE = yes
+SRC += features/translate_ansi_to_jis.c
 
 # CAPS_WORD_ENABLE ?= yes

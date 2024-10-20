@@ -4,6 +4,18 @@
 #include "config_aqua.h"
 
 #include "features/combo.h"
+#include "a2j/translate_ansi_to_jis.h"
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  ...
+
+  if (!is_jis_mode()) {
+    return true;
+  }
+
+  return process_record_user_a2j(keycode, record);
+}
 
 layer_state_t layer_state_set_user(layer_state_t state) {
   // レイヤーが1または3の場合、スクロールモードが有効になる
