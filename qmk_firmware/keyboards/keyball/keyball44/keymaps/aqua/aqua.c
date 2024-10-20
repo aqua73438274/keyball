@@ -4,7 +4,7 @@
 #include "config_aqua.h"
 
 #include "features/combo.h"
-#include "a2j/translate_ansi_to_jis.h"
+#include "features/translate_ansi_to_jis.h"
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -27,13 +27,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case MOS:
       rgblight_sethsv(HSV_WHITE);
       break;
-    case 1:
+    case NUM:
       rgblight_sethsv(HSV_RED);
       break;
-    case 2:
+    case SYM:
       rgblight_sethsv(HSV_YELLOW);
       break;
-    case 3:
+    case NAV:
       rgblight_sethsv(HSV_GREEN);
       break;
 
