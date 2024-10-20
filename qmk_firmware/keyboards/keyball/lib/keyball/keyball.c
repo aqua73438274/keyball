@@ -798,7 +798,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 #endif
 
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-            case d:
+            case AML_TO:
                 set_auto_mouse_enable(!get_auto_mouse_enable());
                 break;
             case AML_I50:
