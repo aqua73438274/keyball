@@ -1,6 +1,8 @@
 #ifndef _AQUA_H_
 #define _AQUA_H_
 
+#define GC(key) RGUI(RCTL(key))
+
 enum layeLs {
   BASE,
   SYM,
