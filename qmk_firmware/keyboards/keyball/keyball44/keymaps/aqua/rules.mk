@@ -8,7 +8,7 @@ OLED_ENABLE = no
 
 
 # aqua settings
-ALT_KEYMAP_DISEBLE #for use qwerty layout
+ALT_KEYMAP_DISEBLE	# for use qwerty layout
 COMBO_ENABLE = yes
 SRC += features/translate_ansi_to_jis.c
 
