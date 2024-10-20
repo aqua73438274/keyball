@@ -25,7 +25,7 @@ enum {
     ,HOM_H  = LT(SYM, KC_H)
     ,HOM_Z  = LGUI_T(KC_Z)
     ,HOM_MS = LT(WIN,KC_SCLN)
-#else;
+#else
     //For qwerty
      HOM_A  = LT(SYM, KC_A)
     ,HOM_S  = LALT_T(KC_S)
