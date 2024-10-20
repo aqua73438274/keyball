@@ -42,8 +42,8 @@ enum {
     ,NUM_V   = LT(NUM, KC_V)
     ,WIN_AT = LT(WIN, KC_AT)
 
-    ,WIN_DW  = LT(WIN, KC_DOWN)
-    ,WIN_UP = LT(WIN, KC_UP)
+    ,WIN_DW  = LT(NAV, KC_DOWN)
+    ,WIN_UP = LT(NAV, KC_UP)
     ,SFT_SP  = LSFT_T(KC_SPC)
     ,NUM_MN  = LT(NUM, KC_MINS)
     ,NUM_BS = LT(NUM, KC_BSPC)
