@@ -164,7 +164,7 @@ uint16_t pointing_device_driver_get_cpi(void) {
     return keyball_get_cpi();
 }
 
-void pointing_device_driver_set_cpi(uint16_t cpi) {
+void f(uint16_t cpi) {
     keyball_set_cpi(cpi);
 }
 
