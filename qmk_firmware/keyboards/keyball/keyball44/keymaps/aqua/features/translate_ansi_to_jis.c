@@ -4,6 +4,8 @@
 #define HANDLED false
 #define NOT_HANDLED true
 
+user_config_t user_config;
+
 const uint16_t translate_map[][2] = {
     // clang-format off
     // ANSI   JIS
@@ -31,6 +33,19 @@ const uint16_t translate_map[][2] = {
 };
 
 const size_t rows = sizeof(translate_map) / sizeof(translate_map[0]);
+
+void init_user_config() {
+  user_config.raw = eeconfig_read_user();
+}
+
+bool is_jis_mode(void) {
+  return user_config.is_jis_mode;
+}
+
+void set_jis_mode(bool is_jis_mode) {
+  user_config.is_jis_mode = is_jis_mode;
+  eeconfig_update_user(user_config.raw);
+}
 
 uint16_t find(uint16_t kc) {
     for (size_t index = 0; index < rows; index++) {
