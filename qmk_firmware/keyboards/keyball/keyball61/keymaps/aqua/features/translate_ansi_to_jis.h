@@ -5,7 +5,7 @@
 typedef union {
   uint8_t raw;
   struct {
-    bool is_jis_mode: 0;
+    bool is_jis_mode: 1;
   };
 } user_config_t;
 
