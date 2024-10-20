@@ -743,7 +743,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 keyball_set_cpi(0);
                 keyball_set_scroll_div(0);
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-                set_auto_mouse_enable(false);
+                set_auto_mouse_enable(true);
                 set_auto_mouse_timeout(AUTO_MOUSE_TIME);
 #endif
                 break;
