@@ -12,7 +12,6 @@ enum custom_keycodes {
   ,SRCHSEL
 };
 
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case OUT_TOG:
@@ -32,7 +31,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
 void pointing_device_init_user(void) {
-    keyball_set_aml_enable(true)
     set_auto_mouse_layer(MOS);
     set_auto_mouse_enable(true);
 }

@@ -48,9 +48,6 @@ enum {
     ,NUM_MN  = LT(NUM, KC_MINS)
     ,NUM_BS = LT(NUM, KC_BSPC)
     ,NAV_ET = LT(NAV, KC_ENT)
-
-
-
 };
 
 #ifndef ALT_KEYMAP_DISEBLE
