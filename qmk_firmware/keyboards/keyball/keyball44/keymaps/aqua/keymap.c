@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
   ,[SYM] = LAYOUT_universal(
-      _______, MO(FUN), KC_LABK, KC_RABK, KC_BSLS, KC_GRV 
+      MO(FUN), MO(FUN), KC_LABK, KC_RABK, KC_BSLS, KC_GRV 
     , _______, KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
     , _______, _______, KC_SLSH, KC_ASTR, KC_CIRC, _______
     ,                   _______, _______, _______, _______, _______
