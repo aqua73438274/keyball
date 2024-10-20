@@ -42,84 +42,84 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, _______, _______, _______
       KC_ESC ,G(KC_TAB),KC_F2  , KC_F3  , KC_F4  , KC_F5 
     , MO(FUN), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
-    , _______, _______, KC_SLSH, KC_ASTR, KC_CIRC, _______
-    ,                   _______, _______, _______, _______, _______
+    , _______, _______, KC_SLSH, KC_ASTR, KC_CIRC, _______, _______
+    , _______, _______, _______, _______, _______, _______, _______
    
     ,                   _______, _______, _______, _______, _______, _______
     ,                   KC_AMPR, _______, KC_LBRC, KC_RBRC, _______, _______
     ,                   KC_PIPE, KC_COLN, KC_LPRN, KC_RPRN, KC_PERC, _______
-    ,                   KC_TILD, KC_DLR , KC_LCBR, KC_RCBR, _______, _______
-    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
+    ,         _______ , KC_TILD, KC_DLR , KC_LCBR, KC_RCBR, _______, _______
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
   ,[NUM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
-    ,                   _______, _______, _______, TO(BASE), _______
+    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
+    , _______, _______, _______, _______, _______, TO(BASE), _______
    
     ,                   _______, _______, _______, _______, _______, _______
     ,                   KC_TAB , KC_7   , KC_8   , KC_9   , KC_PLUS, KC_SLSH
     ,                   KC_COLN, KC_1   , KC_2   , KC_3   , KC_MINS, KC_ASTR
-    ,                   KC_COMM, KC_4   , KC_5   , KC_6   , KC_DOT , _______
-    ,            KC_0 , _______, XXXXXXX, XXXXXXX, _______
+    ,         _______ , KC_COMM, KC_4   , KC_5   , KC_6   , KC_DOT , _______
+    ,            KC_0 , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
   ,[WIN] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
-    ,                   _______, _______, _______, _______, _______
+    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
+    , _______, _______,  _______, _______, _______, _______, _______
    
     ,                   _______, _______, _______, _______, _______, _______
     ,                   XXXXXXX, G(KC_7), G(KC_8), G(KC_9), XXXXXXX, XXXXXXX
     ,             G(S(KC_LEFT)), G(KC_1), G(KC_2), G(KC_3), G(S(KC_RGHT)), XXXXXXX
-    ,                 G(KC_TAB), G(KC_4), G(KC_5), G(KC_6), KC_VOLD , KC_VOLU
-    ,         _______ , _______, _______, _______, _______
+    ,         _______ ,G(KC_TAB), G(KC_4), G(KC_5), G(KC_6), KC_VOLD , KC_VOLU
+    ,         _______ , _______, _______, _______, _______, _______, _______
   )
 
   ,[FUN] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
       OUT_TOG, AML_TO , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
-    ,                   _______, _______, _______, TO(BASE), _______
+    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
+    , _______, _______, _______, _______, _______, TO(BASE), _______
    
     ,                   _______, _______, _______, _______, _______, _______
     ,                   XXXXXXX, KC_F7  , KC_F8  , KC_F9  , KC_F10 , XXXXXXX
     ,                   XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F11 , XXXXXXX
-    ,                   XXXXXXX, KC_F4  , KC_F5  , KC_F6  , KC_F12 , _______
-    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
+     ,         _______ , XXXXXXX, KC_F4  , KC_F5  , KC_F6  , KC_F12 , _______
+   ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
   ,[NAV] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
-    ,                   KC_LEFT, KC_RGHT,C(KC_PGUP), _______,C(KC_PGDN)
+    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
+    , _______, _______,  KC_LEFT, KC_RGHT,C(KC_PGUP), _______,C(KC_PGDN)
    
     ,                   _______, _______, _______, _______, _______, _______
     ,                   XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX ,  GC(KC_F4)
     ,                   KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END  ,  GC(KC_D)
-    ,                   KC_ENT , KC_PGUP, KC_APP , KC_PGDN,GC(KC_LEFT),GC(KC_RGHT)
-    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
+    ,         _______ , KC_ENT , KC_PGUP, KC_APP , KC_PGDN,GC(KC_LEFT),GC(KC_RGHT)
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
   ,[MOS] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
-    ,                   _______, _______, _______, _______, _______
+    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
+    , _______, _______, _______, _______, _______, _______, _______
    
     ,                   _______, _______, _______, _______, _______, _______
     ,                XXXXXXX   , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
     ,                KC_MS_BTN5, XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,                KC_MS_BTN4,KC_MS_BTN3,KC_MS_BTN1,KC_MS_BTN2, XXXXXXX , _______
-    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
+    ,         _______ , KC_MS_BTN4,KC_MS_BTN3,KC_MS_BTN1,KC_MS_BTN2, XXXXXXX , _______
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 };
 // clang-format on
