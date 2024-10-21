@@ -88,11 +88,11 @@ static void process_eager_mods_action(void) {
 static void recursively_process_record(keyrecord_t* record, uint8_t state) {
   achordion_state = STATE_RECURSING;
 #if defined(POINTING_DEVICE_ENABLE) && defined(POINTING_DEVICE_AUTO_MOUSE_ENABLE)
-  int8_t mouse_key_tracker = get_auto_mouse_key_tracker();
+//  int8_t mouse_key_tracker = get_auto_mouse_key_tracker(); // disable for using old qmk about pointing_device_auto_mouse
 #endif
   process_record(record);
 #if defined(POINTING_DEVICE_ENABLE) && defined(POINTING_DEVICE_AUTO_MOUSE_ENABLE)
-  set_auto_mouse_key_tracker(mouse_key_tracker);
+//  set_auto_mouse_key_tracker(mouse_key_tracker); // disable for using old qmk about pointing_device_auto_mouse
 #endif
   achordion_state = state;
 }
