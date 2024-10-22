@@ -258,7 +258,7 @@ combo_t key_combos[COMBO_COUNT] = {
   ,[COMBO_zomM_1] = COMBO_ACTION(zomM_combo_1)
   ,[COMBO_plus_1] = COMBO(plus_combo_1, KC_PLUS)
   ,[COMBO_astr_1] = COMBO(astr_combo_1, KC_ASTR)
-  ,[COMBO_cpWrd_1] = COMBO(f10_combo_1, )//
+  ,[COMBO_cpWrd_1] = COMBO(f10_combo_1, CW_TOGG)//
   ,[COMBO_reTrs_1] = COMBO_ACTION(reTrs_combo_1)
   ,[COMBO_clbd_1] = COMBO_ACTION(clbd_combo_1)
   // End paste from spreadsheet `def 3`
