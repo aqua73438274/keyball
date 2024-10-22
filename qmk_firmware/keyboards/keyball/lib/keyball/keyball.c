@@ -272,7 +272,7 @@ static inline bool should_report(void) {
 }
 
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-static uint16_t keyball_keyball_get_auto_mouse_timeout(void) {
+static uint16_t keyball_get_auto_mouse_timeout(void) {
     return keyball.auto_mouse_layer_timeout;
 }
 
@@ -284,7 +284,7 @@ static uint16_t get_auto_mouse_keep_time(void) {
 #ifdef AUTO_MOUSE_LAYER_KEEP_TIME
         return AUTO_MOUSE_LAYER_KEEP_TIME;
 #else
-        return keyball_keyball_get_auto_mouse_timeout();
+        return keyball_get_auto_mouse_timeout();
 #endif
 }
 
@@ -299,7 +299,7 @@ bool auto_mouse_activation(report_mouse_t mouse_report) {
     keyball.total_mouse_movement += movement_size_of(&mouse_report);
     if (AML_ACTIVATE_THRESHOLD < keyball.total_mouse_movement) {
         keyball.total_mouse_movement = 0;
-        if (keyball_get_auto_mouse_timeout() != get_auto_mouse_keep_time()) {
+        if (get_auto_mouse_timeout() != get_auto_mouse_keep_time()) {
             // keep AML if mouse is moving with "short timeout".
             set_auto_mouse_timeout(get_auto_mouse_keep_time());
         }
@@ -639,7 +639,7 @@ void keyboard_post_init_kb(void) {
         keyball_set_scroll_div(c.sdiv);
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
         set_auto_mouse_enable(!c.amle);
-        set_auto_mouse_timeout(c.amlto == 0 ? AUTO_MOUSE_TIME : (c.amlto + 1) * AML_TIMEOUT_QU);
+        keyball_set_auto_mouse_timeout(c.amlto == 0 ? AUTO_MOUSE_TIME : (c.amlto + 1) * AML_TIMEOUT_QU);
 #endif
 #if KEYBALL_SCROLLSNAP_ENABLE == 2
         keyball_set_scrollsnap_mode(c.ssnap);
@@ -707,7 +707,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     if (keycode >= QK_MODS && keycode <= QK_MODS_MAX) {
         keycode &= 0xff;
     }
-    
+
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
     // reduce auto mouse timeout if mouse key is pressed.
     if ((is_mouse_record_kb(keycode, record) || IS_MOUSEKEY(keycode)) && record->event.pressed) {
@@ -803,13 +803,13 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             case AML_I50:
                 {
                     uint16_t v = keyball_get_auto_mouse_timeout() + 50;
-                    set_auto_mouse_timeout(MIN(v, AML_TIMEOUT_MAX));
+                    keyball_set_auto_mouse_timeout(MIN(v, AML_TIMEOUT_MAX));
                 }
                 break;
             case AML_D50:
                 {
                     uint16_t v = keyball_get_auto_mouse_timeout() - 50;
-                    set_auto_mouse_timeout(MAX(v, AML_TIMEOUT_MIN));
+                    keyball_set_auto_mouse_timeout(MAX(v, AML_TIMEOUT_MIN));
                 }
                 break;
 #endif
