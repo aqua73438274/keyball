@@ -33,8 +33,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #    define RGBLIGHT_EFFECT_TWINKLE
 // #endif
 
-// #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-// // only required if not setting mouse layer elsewhere
-// #define AUTO_MOUSE_DEFAULT_LAYER 6
+#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+// only required if not setting mouse layer elsewhere
+#define AUTO_MOUSE_DEFAULT_LAYER 6
+#define AUTO_MOUSE_LAYER_KEEP_TIME 30000
 
 #define COMBO_COUNT 74
