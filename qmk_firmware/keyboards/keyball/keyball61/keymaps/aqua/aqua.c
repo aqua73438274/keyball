@@ -180,4 +180,10 @@ bool caps_word_press_user(uint16_t keycode) {
 }
 #endif  // CAPS_WORD_ENABLE
 
+void matrix_scan_user(void) {
+#ifdef ACHORDION_ENABLE
+  achordion_task();
+#endif  // ACHORDION_ENABLE
+}
+
 #endif // _AQUA_C_
