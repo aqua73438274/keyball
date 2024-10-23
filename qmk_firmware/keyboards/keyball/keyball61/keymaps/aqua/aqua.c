@@ -20,6 +20,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
     case HOM_S:
     case HOM_I:
       return TAPPING_TERM + 15;
+    case B_3_R5:
+      return TAPPING_TERM - 15;
     default:
       return TAPPING_TERM;
   }
