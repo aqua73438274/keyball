@@ -3,6 +3,19 @@
 
 #define GC(key) RGUI(RCTL(key))
 
+// Tap-hold configuration for home row mods.
+// #define TAPPING_TERM 170
+#define TAPPING_TERM_PER_KEY
+#define PERMISSIVE_HOLD
+#define QUICK_TAP_TERM_PER_KEY
+
+#define ACHORDION_STREAK
+
+// Holding Shift while Caps Word is active inverts the shift state.
+#define CAPS_WORD_INVERT_ON_SHIFT
+// When idle, turn off Caps Word after 5 seconds.
+#define CAPS_WORD_IDLE_TIMEOUT 5000
+
 enum layeLs {
   BASE,
   SYM,
