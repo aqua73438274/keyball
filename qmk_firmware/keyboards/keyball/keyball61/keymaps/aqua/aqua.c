@@ -17,8 +17,8 @@ enum custom_keycodes {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
-    case HOM_S:
-    case HOM_I:
+    case B_2_L4:
+    case B_2_R3:
       return TAPPING_TERM + 15;
     default:
       return TAPPING_TERM;
@@ -31,8 +31,10 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
   // lead to missed triggers in fast typing. Here, returning 0 means we
   // instead want to "force hold" and disable key repeating.
   switch (keycode) {
-    case HOM_T:
-    case HOM_O:
+    case B_2_L5:
+    case B_2_R2:
+    case B_4_R1:
+    case B_3_R5:
       return QUICK_TAP_TERM;  // Enable key repeating.
     default:
       return 0;  // Otherwise, force hold and disable key repeating.
@@ -51,8 +53,8 @@ bool achordion_chord(uint16_t tap_hold_keycode,
 
   switch (tap_hold_keycode) {
     // Exceptionally allow symbol layer LTs + row 0 in same-hand chords.
-    case HOM_E:
-    case HOM_H:
+    case B_2_L2:
+    case B_2_R5:
       if (row == 0) { return true; }
       break;
   }
@@ -76,12 +78,12 @@ uint16_t achordion_streak_chord_timeout(
 
   // Exceptions so that certain hotkeys don't get blocked as streaks.
   switch (tap_hold_keycode) {
-    case HOM_T:
+    case B_2_R2:
       if (next_keycode == KC_C || next_keycode == KC_V) {
         return 0;
       }
       break;
-    case HOM_O:
+    case B_2_L5:
       if (next_keycode == HOM_N) {
         return 0;
       }
