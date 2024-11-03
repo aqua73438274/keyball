@@ -40,9 +40,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[SYM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-    , _______, XXXXXXX, KC_LABK, KC_RABK, KC_BSLS, KC_GRV
+    , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQ  , KC_CIRC
     , MO(FUN), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
-    , _______, _______, KC_SLSH, KC_ASTR, KC_CIRC, _______, _______
+    , _______, _______, KC_SLSH, KC_ASTR, KC_BSLS, _______, _______
     , _______, _______, _______, _______, _______, _______, _______
    
     ,                   _______, _______, _______, _______, _______, _______
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   _______, _______, _______, _______, _______, _______
     ,                   XXXXXXX, G(KC_7), G(KC_8), G(KC_9), XXXXXXX, XXXXXXX
     ,             G(S(KC_LEFT)), G(KC_1), G(KC_2), G(KC_3), G(S(KC_RGHT)), XXXXXXX
-    ,         _______ ,G(KC_TAB), G(KC_4), G(KC_5), G(KC_6), KC_VOLD , KC_VOLU
+    ,        _______ ,G(KC_TAB), G(KC_4), G(KC_5), G(KC_6), KC_VOLD, KC_VOLU
     ,         _______ , _______, _______, _______, _______, _______, _______
   )
 
@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   _______, _______, _______, _______, _______, _______
     ,                   XXXXXXX, KC_F7  , KC_F8  , KC_F9  , KC_F10 , XXXXXXX
     ,                   XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F11 , XXXXXXX
-     ,         _______ , XXXXXXX, KC_F4  , KC_F5  , KC_F6  , KC_F12 , _______
+    ,         _______ , XXXXXXX, KC_F4  , KC_F5  , KC_F6  , KC_F12 , _______
    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
     , _______, _______,  KC_LEFT, KC_RGHT,C(KC_PGUP), _______,C(KC_PGDN)
-   
+   ;
     ,                   _______, _______, _______, _______, _______, _______
     ,                   XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX ,  GC(KC_F4)
     ,                   KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END  ,  GC(KC_D)
