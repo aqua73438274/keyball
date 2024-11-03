@@ -118,10 +118,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
   }
 
   if (record->event.pressed) {
-  switch (keycode) {
-    case UPDIR:
-      SEND_STRING_DELAY("../", TAP_CODE_DELAY);
-      return false;
+    switch (keycode) {
+      case UPDIR:
+        SEND_STRING_DELAY("../", TAP_CODE_DELAY);
+        return false;
+    }
   }
 
 
