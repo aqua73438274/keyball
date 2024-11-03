@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, _______, _______, _______
     , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQT , KC_CIRC
     , MO(FUN), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
-    , _______, _______, KC_SLSH, KC_ASTR, KC_BSLS, _______, _______
+    , _______, _______, KC_SLSH, KC_ASTR, KC_BSLS, UPDIR  , _______
     , _______, _______, _______, _______, _______, _______, _______
    
     ,                   _______, _______, _______, _______, _______, _______
@@ -115,11 +115,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
     , _______, _______, _______, _______, _______, _______, _______
    
-    ,                   _______, _______, _______, _______, _______, _______
+    ,                   _______, _______  , _______  , _______  , _______ , _______
     ,                XXXXXXX   , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
     ,                KC_MS_BTN5, XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,         _______ , KC_MS_BTN4,KC_MS_BTN3,KC_MS_BTN1,KC_MS_BTN2, XXXXXXX , _______
-    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
+    ,       _______ ,KC_MS_BTN4,KC_MS_BTN3,KC_MS_BTN1,KC_MS_BTN2, XXXXXXX , _______
+    ,         _______ , _______, XXXXXXX  , XXXXXXX  , _______  , _______ , _______
   )
 };
 // clang-format on

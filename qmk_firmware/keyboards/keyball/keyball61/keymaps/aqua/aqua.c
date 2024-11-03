@@ -13,6 +13,10 @@
 enum custom_keycodes {
   OUT_TOG = SAFE_RANGE
   ,SRCHSEL
+  ,LMAGIC
+  ,RMAGIC
+  ,LLOCK
+  ,UPDIR
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
@@ -110,6 +114,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
       if (record->event.pressed) {
         set_jis_mode(!is_jis_mode());
       }
+      return false;
+  }
+
+  if (record->event.pressed) {
+  switch (keycode) {
+    case UPDIR:
+      SEND_STRING_DELAY("../", TAP_CODE_DELAY);
       return false;
   }
 
