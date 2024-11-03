@@ -53,6 +53,7 @@ enum {
     ,HOM_SC = LGUI_T(KC_SCLN)
     ,HOM_MS = LT(WIN,KC_SCLN)
     ,NUM_SQ = LT(NUM, KC_QUOT)
+    ,HOM_X  = LT(WIN, KC_X)
 #else
     //For qwerty
      HOM_A  = LT(SYM, KC_A)
@@ -66,7 +67,6 @@ enum {
     ,HOM_Z  = LGUI_T(KC_Z)
     ,HOM_BL = LT(WIN,KC_BSLS)
     ,NUM_V   = LT(NUM, KC_V)
-    ,HOM_X  = LT(WIN, KC_X)
 #endif
 
     ,NUM_V   = LT(NUM, KC_V)
