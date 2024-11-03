@@ -104,6 +104,97 @@ uint16_t achordion_streak_chord_timeout(
 }
 #endif  // ACHORDION_ENABLE
 
+// An enhanced version of SEND_STRING: if Caps Word is active, the Shift key is
+// held while sending the string. Additionally, the last key is set such that if
+// the Repeat Key is pressed next, it produces `repeat_keycode`.
+#define MAGIC_STRING(str, repeat_keycode) \
+        magic_send_string_P(PSTR(str), (repeat_keycode))
+ 
+static void magic_send_string_P(const char* str, uint16_t repeat_keycode) {
+    uint8_t saved_mods = 0;
+ 
+  if (is_caps_word_on()) { // If Caps Word is on, save the mods and hold Shift.
+    saved_mods = get_mods();
+    register_mods(MOD_BIT(KC_LSFT));
+  }
+ 
+  send_string_with_delay_P(str, TAP_CODE_DELAY);  // Send the string.
+  set_last_keycode(repeat_keycode); // 2024-03-09 Disabled sending of string for mag-rep / rep-mag consistency.
+ 
+  // If Caps Word is on, restore the mods.
+  if (is_caps_word_on()) {
+    set_mods(saved_mods);
+  }
+}
+
+static void process_left_magic(uint16_t keycode, uint8_t mods) { // LMAGIC definitions
+    switch (keycode) {
+        case B_1_L2: { MAGIC_STRING("a",         KC_SPC); } break;
+        case  B_1_L2: { MAGIC_STRING("ecause",    KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("an",        KC_NO); } break;
+      //case B_1_L2: { MAGIC_STRING("d",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("e",         KC_NO); } break;
+      //case  B_1_L2: { MAGIC_STRING("f",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("eneral",    KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("h",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("i",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("ust",       KC_NO); } break;
+      //case  B_1_L2: { MAGIC_STRING("k",         KC_NO); } break;
+      //case B_1_L2: { MAGIC_STRING("l",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("ent",       KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("ion",       KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("o",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("retty",     KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("q",         KC_NO); } break;
+      //case B_1_L2: { MAGIC_STRING("r",         KC_NO); } break;
+      //case B_1_L2: { MAGIC_STRING("s",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("t",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("u",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("azjorfia",  KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("hich",      KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("x",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("y",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("z",         KC_NO); } break;
+ 
+        case B_1_L2: { MAGIC_STRING(" and",    KC_NO); } break;
+    }
+}
+ 
+static void process_right_magic(uint16_t keycode, uint8_t mods) { // RMAGIC definitions
+    switch (keycode) {
+        case B_1_L2: { MAGIC_STRING("nd",        KC_SPC); } break;
+        case  B_1_L2: { MAGIC_STRING("b",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("c",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("d",         KC_NO); } break;
+      //case B_1_L2: { MAGIC_STRING("e",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("f",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("g",         KC_NO); } break;
+      //case B_1_L2: { MAGIC_STRING("h",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("on",        KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("j",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("k",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("l",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("m",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("n",         KC_NO); } break;
+      //case  B_1_L2: { MAGIC_STRING("o",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("p",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("ueen",      KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("r",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("s",         KC_NO); } break;
+      //case  B_1_L2: { MAGIC_STRING("t",         KC_NO); } break;
+      //case  B_1_L2: { MAGIC_STRING("u",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("v",         KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("w",         KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("ex",        KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("eah",       KC_NO); } break;
+      //case  B_1_L2: { MAGIC_STRING("z",         KC_NO); } break;
+ 
+        case B_1_L2: { MAGIC_STRING(" but",    KC_NO); } break;
+        case  B_1_L2: { MAGIC_STRING("the",     KC_NO); } break;
+        case B_1_L2: { MAGIC_STRING("*N**or**dr**as**s**i**l**", KC_NO); } break;
+    }
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
 #ifdef ACHORDION_ENABLE
   if (!process_achordion(keycode, record)) { return false; }
@@ -119,9 +210,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
 
   if (record->event.pressed) {
     switch (keycode) {
-      case UPDIR:
-        SEND_STRING_DELAY("../", TAP_CODE_DELAY);
-        return false;
+      case UPDIR:    SEND_STRING_DELAY("../", TAP_CODE_DELAY); return false;
+      case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC); } return false;
+      case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC); } return false;
     }
   }
 
