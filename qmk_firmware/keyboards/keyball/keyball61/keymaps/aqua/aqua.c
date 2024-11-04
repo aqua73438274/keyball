@@ -37,8 +37,6 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
     case B_2_L5:
     case B_2_R2:
-    case B_4_R1:
-    case B_3_R5:
       return QUICK_TAP_TERM;  // Enable key repeating.
     default:
       return 0;  // Otherwise, force hold and disable key repeating.
@@ -68,15 +66,16 @@ bool achordion_chord(uint16_t tap_hold_keycode,
 
 uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
   switch (tap_hold_keycode) {
-    default:
-      return 800;  // Use a timeout of 800 ms.
+    B_4_R1:  return 150;  // Use a timeout of 800 ms.
+    B_3_R5:  return 150;  // Use a timeout of 800 ms.
+    default: return 800;  // Use a timeout of 800 ms.
   }
 }
 
 uint16_t achordion_streak_chord_timeout(
     uint16_t tap_hold_keycode, uint16_t next_keycode) {
   // Disable streak detection on LT keys.
-  if (IS_QK_LAYER_TAP(tap_hold_keycode)) {
+  if ((tap_hold_keycode)) {
     return 0;
   }
 
