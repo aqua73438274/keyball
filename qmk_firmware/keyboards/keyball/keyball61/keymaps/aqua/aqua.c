@@ -66,8 +66,8 @@ bool achordion_chord(uint16_t tap_hold_keycode,
 
 uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
   switch (tap_hold_keycode) {
-    B_4_R1:  return 150;  // Use a timeout of 800 ms.
-    B_3_R5:  return 150;  // Use a timeout of 800 ms.
+    case B_4_R1:  return 150;  // Use a timeout of 800 ms.
+    case B_3_R5:  return 150;  // Use a timeout of 800 ms.
     default: return 800;  // Use a timeout of 800 ms.
   }
 }
