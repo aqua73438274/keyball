@@ -108,6 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
+
   ,[MOS] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
     , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
