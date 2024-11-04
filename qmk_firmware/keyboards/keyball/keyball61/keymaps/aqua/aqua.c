@@ -9,16 +9,6 @@
 #include "features/combo.h"
 #include "features/translate_ansi_to_jis.h"
 
-// Defines the keycodes used by our macros in process_record_user
-enum custom_keycodes {
-  OUT_TOG = SAFE_RANGE
-  ,SRCHSEL
-  ,LMAGIC
-  ,RMAGIC
-  ,LLOCK
-  ,UPDIR
-};
-
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
     case B_2_L4:
