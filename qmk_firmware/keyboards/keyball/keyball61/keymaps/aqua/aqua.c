@@ -163,7 +163,7 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defi
         case HOM_A: { MAGIC_STRING("o",         KC_NO); } break;
         case  KC_B: { MAGIC_STRING("p",         KC_NO); } break;
         case  KC_C: { MAGIC_STRING("c",         KC_NO); } break;
-        case HOM_D: { MAGIC_STRING("d",         KC_NO); } break;
+        case  KC_D: { MAGIC_STRING("d",         KC_NO); } break;
         case HOM_E: { MAGIC_STRING("u",         KC_NO); } break;
         case  KC_F: { MAGIC_STRING("n",         KC_NO); } break;
         case  KC_G: { MAGIC_STRING("g",         KC_NO); } break;
@@ -209,7 +209,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
       case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC); } return false;
     }
   }
-
 
   if (!is_jis_mode()) {
     return true;
