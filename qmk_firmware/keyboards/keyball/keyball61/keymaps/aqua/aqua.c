@@ -125,12 +125,12 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
     }
     return true;  // Other keys can be repeated.
 }
- 
+
 
 static void process_left_magic(uint16_t keycode, uint8_t mods) { // LMAGIC definitions
     switch (keycode) {
-        case HOM_A: { MAGIC_STRING("a",         KC_SPC); } break;
-        case  KC_B: { MAGIC_STRING("n",         KC_NO); } break;
+        case HOM_A: { MAGIC_STRING("a",         KC_NO); } break;
+        case  KC_B: { MAGIC_STRING("b",         KC_NO); } break;
         case  KC_C: { MAGIC_STRING("y",         KC_NO); } break;
         case  KC_D: { MAGIC_STRING("y",         KC_NO); } break;
         case HOM_E: { MAGIC_STRING("e",         KC_NO); } break;
@@ -162,15 +162,15 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defi
     switch (keycode) {
         case HOM_A: { MAGIC_STRING("o",         KC_NO); } break;
         case  KC_B: { MAGIC_STRING("p",         KC_NO); } break;
-        case  KC_C: { MAGIC_STRING("c",         KC_NO); } break;
+        case  KC_C: { MAGIC_STRING("n",         KC_NO); } break;
         case  KC_D: { MAGIC_STRING("d",         KC_NO); } break;
         case HOM_E: { MAGIC_STRING("u",         KC_NO); } break;
         case  KC_F: { MAGIC_STRING("n",         KC_NO); } break;
         case  KC_G: { MAGIC_STRING("g",         KC_NO); } break;
         case  KC_H: { MAGIC_STRING("n",         KC_NO); } break;
         case HOM_I: { MAGIC_STRING("u",         KC_NO); } break;
-        case  KC_J: { MAGIC_STRING("k",         KC_NO); } break;
-        case  KC_K: { MAGIC_STRING("j",         KC_NO); } break;
+        case  KC_J: { MAGIC_STRING("j",         KC_NO); } break;
+        case  KC_K: { MAGIC_STRING("k",         KC_NO); } break;
         case  KC_L: { MAGIC_STRING("l",         KC_NO); } break;
         case  KC_M: { MAGIC_STRING("m",         KC_NO); } break;
         case HOM_N: { MAGIC_STRING("p",         KC_NO); } break;
