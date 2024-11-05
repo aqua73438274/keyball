@@ -97,7 +97,7 @@ uint16_t achordion_streak_chord_timeout(
 // held while sending the string. Additionally, the last key is set such that if
 // the Repeat Key is pressed next, it produces `repeat_keycode`.
 #define MAGIC_STRING(str, repeat_keycode) \
-        magic_send_string_P(PSTR(str), (repeat_keycode))
+        (PSTR(str), (repeat_keycode))
  
 static void magic_send_string_P(const char* str, uint16_t repeat_keycode) {
     uint8_t saved_mods = 0;
@@ -115,6 +115,17 @@ static void magic_send_string_P(const char* str, uint16_t repeat_keycode) {
     set_mods(saved_mods);
   }
 }
+
+bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
+                            uint8_t* remembered_mods) {
+    switch (keycode) { 
+        case LMAGIC:
+        case RMAGIC:
+            return false;  // Magic keys will ignore the above keycodes.
+    }
+    return true;  // Other keys can be repeated.
+}
+ 
 
 static void process_left_magic(uint16_t keycode, uint8_t mods) { // LMAGIC definitions
     switch (keycode) {
