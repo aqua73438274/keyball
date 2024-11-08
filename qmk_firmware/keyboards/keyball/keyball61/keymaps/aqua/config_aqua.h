@@ -5,9 +5,7 @@
 
 // Unfortunately, some applications drop or misorder fast key events. This is a
 // partial fix to slow down the rate at which macros are sent.
-#if defined(TAP_CODE_DELAY)
- #define TAP_CODE_DELAY 5
-#endif
+// #define TAP_CODE_DELAY 5
 
 // Tap-hold configuration for home row mods.
 // #define TAPPING_TERM 170
