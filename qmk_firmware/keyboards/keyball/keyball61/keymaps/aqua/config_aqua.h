@@ -41,6 +41,7 @@ enum custom_keycodes {
   ,LMAGIC
   ,RMAGIC
   ,LLOCK
+  ,UPDIR
   ,COPY
   ,CUT
   ,PAST
@@ -123,7 +124,7 @@ enum {
     //Left
     B_1_L1= KC_DLR , B_1_L2= KC_Q  , B_1_L3= KC_U  , B_1_L4= KC_O    , B_1_L5= KC_F  , B_1_L6= KC_P
    ,B_2_L1= KC_BSPC, B_2_L2= HOM_E , B_2_L3= HOM_I , B_2_L4= HOM_A   , B_2_L5= HOM_N , B_2_L6= KC_H
-   ,B_3_L1= KC_A T , B_3_L2= HOM_SC, B_3_L3=KC_COMM, B_3_L4= KC_DOT  , B_3_L5= NUM_MN, B_3_L6= KC_B, B_3_L7= ALT_T(KC_LNG2)
+   ,B_3_L1= KC_A   , B_3_L2= HOM_SC, B_3_L3=KC_COMM, B_3_L4= KC_DOT  , B_3_L5= NUM_MN, B_3_L6= KC_B, B_3_L7= ALT_T(KC_LNG2)
    ,B_4_L1=KC_LEFT , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4=KC_RGHT  , B_4_L5= WIN_MN, B_4_L6= SFT_SP, B_4_L7= LMAGIC
 
     //Right
