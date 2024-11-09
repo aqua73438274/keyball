@@ -2,6 +2,7 @@
 #define _AQUA_H_
 
 #define GC(key) RGUI(RCTL(key))
+#define GS(key) RGUI(RSFT(key))
 
 // Unfortunately, some applications drop or misorder fast key events. This is a
 // partial fix to slow down the rate at which macros are sent.
@@ -20,6 +21,9 @@
 // When idle, turn off Caps Word after 5 seconds.
 #define CAPS_WORD_IDLE_TIMEOUT 5000
 
+// When idle, turn off Layer Lock after 60 seconds.
+#define LAYER_LOCK_IDLE_TIMEOUT 60000
+
 enum layeLs {
   BASE,
   SYM,
@@ -37,7 +41,11 @@ enum custom_keycodes {
   ,LMAGIC
   ,RMAGIC
   ,LLOCK
-  ,UPDIR
+  ,COPY
+  ,CUT
+  ,PAST
+  ,UNREDO
+  ,CLPBD
 };
 
 // Short aliases for home row mods and other tap-hold keys.
@@ -84,7 +92,7 @@ enum {
 #endif
 
     ,NUM_V   = LT(NUM, KC_V)
-    ,WIN_AT = LT(WIN, KC_AT)
+    ,WIN_MN = LT(WIN, KC_MINS)
 
     ,WIN_DW  = LT(NAV, KC_DOWN)
     ,WIN_UP = LT(NAV, KC_UP)
@@ -115,8 +123,8 @@ enum {
     //Left
     B_1_L1= KC_DLR , B_1_L2= KC_Q  , B_1_L3= KC_U  , B_1_L4= KC_O    , B_1_L5= KC_F  , B_1_L6= KC_P
    ,B_2_L1= KC_BSPC, B_2_L2= HOM_E , B_2_L3= HOM_I , B_2_L4= HOM_A   , B_2_L5= HOM_N , B_2_L6= KC_H
-   ,B_3_L1= WIN_AT , B_3_L2= HOM_SC, B_3_L3=KC_COMM, B_3_L4= KC_DOT  , B_3_L5= NUM_MN, B_3_L6= KC_B, B_3_L7= ALT_T(KC_LNG2)
-   ,B_4_L1=KC_LEFT , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4=KC_RGHT  , B_4_L5= NUM_MN, B_4_L6= SFT_SP, B_4_L7= LMAGIC
+   ,B_3_L1= KC_A T , B_3_L2= HOM_SC, B_3_L3=KC_COMM, B_3_L4= KC_DOT  , B_3_L5= NUM_MN, B_3_L6= KC_B, B_3_L7= ALT_T(KC_LNG2)
+   ,B_4_L1=KC_LEFT , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4=KC_RGHT  , B_4_L5= WIN_MN, B_4_L6= SFT_SP, B_4_L7= LMAGIC
 
     //Right
    ,                B_1_R1= KC_Z  , B_1_R2= KC_C  , B_1_R3= KC_L      , B_1_R4= KC_K  , B_1_R5= KC_V     , B_1_R6= KC_QUOT
@@ -129,8 +137,8 @@ enum {
     //Left
     B_1_L1= KC_GRV, B_1_L2= KC_Q  , B_1_L3= KC_W  , B_1_L4= KC_E    , B_1_L5= KC_R  , B_1_L6= KC_T
    ,B_2_L1= KC_TAB, B_2_L2= HOM_A , B_2_L3= HOM_S , B_2_L4= HOM_D   , B_2_L5= HOM_F , B_2_L6= KC_G
-   ,B_3_L1= WIN_AT, B_3_L2= HOM_Z , B_3_L3= KC_X  , B_3_L4= KC_C    , B_3_L5= NUM_V , B_3_L6= KC_B
-   ,B_4_L1= KC_NO , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4= KC_LGUI , B_4_L5= SFT_SP, B_4_L6= NUM_MN
+   ,B_3_L1= KC_AT , B_3_L2= HOM_Z , B_3_L3= KC_X  , B_3_L4= KC_C    , B_3_L5= NUM_V , B_3_L6= KC_B
+   ,B_4_L1= KC_NO , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4= WIN_MN  , B_4_L5= SFT_SP, B_4_L6= NUM_MN
 
     //Right
    ,B_1_R1= KC_Y  , B_1_R2= KC_U  , B_1_R3= KC_I      , B_1_R4= KC_O     , B_1_R5= KC_P       , B_1_R6= KC_INT3

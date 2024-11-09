@@ -6,6 +6,9 @@
 #ifdef ACHORDION_ENABLE
 #include "features/achordion.h"
 #endif  // ACHORDION_ENABLE
+#ifdef LAYER_LOCK_ENABLE
+#include "features/layer_lock.h"
+#endif  // LAYER_LOCK_ENABLE
 #include "features/combo.h"
 #include "features/translate_ansi_to_jis.h"
 
@@ -155,6 +158,13 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defin
         case HOM_X: { MAGIC_STRING("l",         KC_NO); } break;
         case HOM_Y: { MAGIC_STRING("d",         KC_NO); } break;
         case  KC_Z: { MAGIC_STRING("y",         KC_NO); } break;
+        
+        case C(KC_TAB):  { MAGIC_STRING(SS_LCTL("\t") ,   C(KC_TAB)); } break;
+        case A(KC_TAB):  { MAGIC_STRING(SS_LALT("\t") ,   A(KC_TAB)); } break;
+        case C(KC_PGDN): { MAGIC_STRING(SS_LCTL(X_PGDN),  C(KC_PGDN)); } break;
+        case GS(KC_RGHT):{ MAGIC_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_RIGHT))), GS(KC_RGHT)); } break;
+
+
     }
 }
  
@@ -186,6 +196,11 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defi
         case HOM_X: { MAGIC_STRING("x",         KC_NO); } break;
         case HOM_Y: { MAGIC_STRING("y",         KC_NO); } break;
         case  KC_Z: { MAGIC_STRING("z",         KC_NO); } break;
+        
+        case C(KC_TAB):  { MAGIC_STRING(SS_LCTL("\t") ,   C(KC_TAB)); } break;
+        case A(KC_TAB):  { MAGIC_STRING(SS_LALT("\t") ,   A(KC_TAB)); } break;
+        case C(KC_PGDN): { MAGIC_STRING(SS_LCTL(X_PGDN),  C(KC_PGDN)); } break;
+        case GS(KC_RGHT):{ MAGIC_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_RIGHT))), GS(KC_RGHT)); } break;
     }
 }
 
@@ -193,20 +208,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
 #ifdef ACHORDION_ENABLE
   if (!process_achordion(keycode, record)) { return false; }
 #endif  // ACHORDION_ENABLE
+#ifdef LAYER_LOCK_ENABLE
+  if (!process_layer_lock(keycode, record, LLOCK)) { return false; }
+#endif  // LAYER_LOCK_ENABLE
   
-  switch (keycode) {
-    case OUT_TOG:
-      if (record->event.pressed) {
-        set_jis_mode(!is_jis_mode());
-      }
-      return false;
-  }
-
   if (record->event.pressed) {
     switch (keycode) {
+      case OUT_TOG:  set_jis_mode(!is_jis_mode()); return false;
       case UPDIR:    SEND_STRING_DELAY("../", TAP_CODE_DELAY); return false;
-      case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC); } return false;
-      case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC); } return false;
+      case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); } return false;
+      case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());} return false;
     }
   }
 
@@ -286,6 +297,9 @@ void matrix_scan_user(void) {
 #ifdef ACHORDION_ENABLE
   achordion_task();
 #endif  // ACHORDION_ENABLE
+#ifdef LAYER_LOCK_ENABLE
+  layer_lock_task();
+#endif  // LAYER_LOCK_ENABLE
 }
 
 #endif // _AQUA_C_
