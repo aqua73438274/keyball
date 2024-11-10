@@ -39,7 +39,8 @@ void init_user_config() {
 }
 
 bool is_jis_mode(void) {
-  return !user_config.is_jis_mode;
+//   return user_config.is_jis_mode;       // For ANJI
+  return !user_config.is_jis_mode;  // For JIS
 }
 
 void set_jis_mode(bool is_jis_mode) {

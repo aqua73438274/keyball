@@ -37,14 +37,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
   ,[SYM] = LAYOUT_universal(
-      _______, XXXXXXX, KC_LABK, KC_RABK, KC_BSLS, KC_GRV
+    , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQT , KC_CIRC
     , MO(FUN), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
-    , _______, _______, KC_SLSH, KC_ASTR, KC_CIRC, _______
+    , _______, _______, KC_SLSH, KC_ASTR, KC_BSLS, UPDIR  
     ,                   _______, _______, _______, _______, _______
    
-    ,                   KC_AMPR, _______, KC_LBRC, KC_RBRC, _______, _______
-    ,                   KC_PIPE, KC_COLN, KC_LPRN, KC_RPRN, KC_PERC, _______
-    ,                   KC_TILD, KC_DLR , KC_LCBR, KC_RCBR, _______, _______
+    ,                   KC_AMPR, KC_QUOT, KC_LBRC, KC_RBRC, KC_PERC, _______
+    ,                   KC_PIPE, KC_COLN, KC_LPRN, KC_RPRN, KC_QUES, _______
+    ,                   KC_TILD, KC_DLR , KC_LCBR, KC_RCBR, KC_AT  , _______
     ,         _______ , _______, XXXXXXX, XXXXXXX, _______
   )
 
@@ -85,9 +85,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
   ,[NAV] = LAYOUT_universal(
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  , XXXXXXX
+    , _______, KC_LGUI, KC_LALT, KC_LSFT, KC_LCTL  , KC_TAB
+    , _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V)  , XXXXXXX
     ,                   KC_LEFT, KC_RGHT,C(KC_PGUP), _______,C(KC_PGDN)
    
     ,                   XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX ,  GC(KC_F4)
@@ -102,10 +102,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
     ,                   _______, _______, _______, _______, _______
    
-    ,                XXXXXXX   , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,                KC_MS_BTN5, XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,                KC_MS_BTN4,KC_MS_BTN3,KC_MS_BTN1,KC_MS_BTN2, XXXXXXX , _______
-    ,         _______ , _______, XXXXXXX, XXXXXXX, _______
+    ,                  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+    ,                  KC_BTN5 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+    ,                  KC_BTN4 , KC_BTN3 , KC_BTN1 , KC_BTN2 , XXXXXXX , _______
+    ,         _______ , _______, XXXXXXX , XXXXXXX , _______
   )
 };
 // clang-format on
