@@ -24,6 +24,8 @@
 // When idle, turn off Layer Lock after 60 seconds.
 #define LAYER_LOCK_IDLE_TIMEOUT 60000
 
+#define COMBO_ONLY_FROM_LAYER 0
+
 enum layeLs {
   BASE,
   SYM,

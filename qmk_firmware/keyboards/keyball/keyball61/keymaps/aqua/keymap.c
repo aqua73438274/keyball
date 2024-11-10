@@ -108,7 +108,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,         _______ , _______, XXXXXXX, XXXXXXX, _______, G(KC_TAB), _______
   )
 
-
   ,[MOS] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
     , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
@@ -117,9 +116,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     , _______, _______, _______, _______, _______, _______, _______
    
     ,                   _______, _______  , _______  , _______  , _______ , _______
-    ,                XXXXXXX   , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,                KC_MS_BTN5, XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,       _______ ,KC_MS_BTN4,KC_MS_BTN3,KC_MS_BTN1,KC_MS_BTN2, XXXXXXX , _______
+    ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
+    ,                  KC_BTN5 , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
+    ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , XXXXXXX , _______
     ,         _______ , _______, XXXXXXX  , XXXXXXX  , _______  , _______ , _______
   )
 };
