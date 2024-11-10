@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______   , _______, _______  , _______ , _______  , _______
     , _______   , XXXXXXX, XXXXXXX  , XXXXXXX , XXXXXXX  , XXXXXXX
     , _______   , KC_LGUI, KC_LALT  , KC_LSFT , KC_LCTL  , KC_TAB
-    , _______   , XXXXXXX, XXXXXXX  , KC_LCTL , XXXXXXX  , XXXXXXX , XXXXXXX
+    , _______   , C(KC_Z), C(KC_X)  , C(KC_C) , C(KC_V)  , XXXXXXX , XXXXXXX
     , _______   , _______,  KC_LEFT , KC_RGHT ,C(KC_PGUP), _______ ,C(KC_PGDN)
 
     ,                   _______, _______, _______, _______, _______ , _______
