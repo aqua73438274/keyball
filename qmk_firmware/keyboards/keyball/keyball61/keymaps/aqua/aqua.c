@@ -129,7 +129,7 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
     return true;  // Other keys can be repeated.
 }
 
-static void process_left_magic(uint16_t keycode, uint8_t mods) { // LMAGIC definitions
+static void process_right_magic(uint16_t keycode, uint8_t mods) { // LMAGIC definitions
     switch (keycode) {
         case HOM_A: { MAGIC_STRING("a",         KC_NO); } break;
         case  KC_B: { MAGIC_STRING("b",         KC_NO); } break;
@@ -162,7 +162,7 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defin
     }
 }
  
-static void process_right_magic(uint16_t keycode, uint8_t mods) { // RMAGIC definitions
+static void process_left_magic(uint16_t keycode, uint8_t mods) { // RMAGIC definitions
     switch (keycode) {
         case HOM_A: { MAGIC_STRING("o",         KC_NO); } break;
         case  KC_B: { MAGIC_STRING("p",         KC_NO); } break;
