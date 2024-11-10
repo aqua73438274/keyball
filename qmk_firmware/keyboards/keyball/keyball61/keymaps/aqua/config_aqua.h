@@ -73,10 +73,12 @@ enum {
     ,HOM_R  = RSFT_T(KC_R)
     ,HOM_T  = LALT_T(KC_T)
     ,HOM_S  = LT(SYM, KC_S)
-    ,HOM_SC = LGUI_T(KC_SCLN)
     ,HOM_MS = LT(WIN,KC_SCLN)
     ,NUM_SQ = LT(NUM, KC_QUOT)
-    ,HOM_X  = LT(WIN, KC_X)
+    ,HOM_X  = LGUI_T(KC_X)
+    ,HOM_SL = LGUI_T(KC_SLSH)
+    ,HOM_SC = LT(WIN, KC_SCLN)
+    ,NUM_W  = LT(NUM, KC_W)
 #else
     //For qwerty
      HOM_A  = LT(SYM, KC_A)
@@ -124,7 +126,7 @@ enum {
     //Left
     B_1_L1= KC_DLR , B_1_L2= KC_Q  , B_1_L3= KC_U  , B_1_L4= KC_O    , B_1_L5= KC_F  , B_1_L6= KC_P
    ,B_2_L1= KC_BSPC, B_2_L2= HOM_E , B_2_L3= HOM_I , B_2_L4= HOM_A   , B_2_L5= HOM_N , B_2_L6= KC_H
-   ,B_3_L1= KC_A   , B_3_L2= HOM_SC, B_3_L3=KC_COMM, B_3_L4= KC_DOT  , B_3_L5= NUM_MN, B_3_L6= KC_B, B_3_L7= ALT_T(KC_LNG2)
+   ,B_3_L1= KC_AT  , B_3_L2= HOM_SC, B_3_L3=KC_COMM, B_3_L4= KC_DOT  , B_3_L5= NUM_MN, B_3_L6= KC_B, B_3_L7= ALT_T(KC_LNG2)
    ,B_4_L1=KC_LEFT , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4=KC_RGHT  , B_4_L5= WIN_MN, B_4_L6= SFT_SP, B_4_L7= LMAGIC
 
     //Right
@@ -132,6 +134,19 @@ enum {
    ,                B_2_R1= KC_D  , B_2_R2= HOM_Y , B_2_R3= HOM_R     , B_2_R4= HOM_T , B_2_R5= HOM_S    , B_2_R6= KC_SLSH
    ,B_3_R0=KC_LNG1, B_3_R1= KC_G  , B_3_R2= KC_W  , B_3_R3= KC_M      , B_3_R4= KC_J  , B_3_R5= HOM_X    , B_3_R6= KC_ENT
    ,B_4_R0=RMAGIC, B_4_R1= NAV_ET, B_4_R2= KC_NO , B_4_R3= KC_NO      , B_4_R4= KC_NO , B_4_R5=GC(KC_LEFT),B_4_R6=GC(KC_RGHT)
+
+   
+    //Left
+    B_1_L1= KC_DLR , B_1_L2= KC_V  , B_1_L3= KC_K  , B_1_L4= KC_L    , B_1_L5= KC_C  , B_1_L6= KC_Z
+   ,B_2_L1= KC_BSPC, B_2_L2= HOM_S , B_2_L3= HOM_T , B_2_L4= HOM_R   , B_2_L5= HOM_Y , B_2_L6= KC_D
+   ,B_3_L1= KC_AT  , B_3_L2= HOM_X , B_3_L3= KC_J  , B_3_L4= KC_M    , B_3_L5= NUM_W , B_3_L6= KC_G  , B_3_L7= ALT_T(KC_LNG2)
+   ,B_4_L1=KC_LEFT , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4=KC_RGHT  , B_4_L5= WIN_MN, B_4_L6= SFT_SP, B_4_L7= LMAGIC
+
+    //Right
+   ,                B_1_R1= KC_P  , B_1_R2= KC_F  , B_1_R3= KC_O     , B_1_R4= KC_U  , B_1_R5= KC_Q     , B_1_R6= KC_QUOT
+   ,                B_2_R1= KC_H  , B_2_R2= HOM_N , B_2_R3= HOM_A    , B_2_R4= HOM_I , B_2_R5= HOM_E    , B_2_R6= HOM_SL
+   ,B_3_R0=KC_LNG1, B_3_R1= KC_B  , B_3_R2=KC_COMM, B_3_R3= KC_BTN1  , B_3_R4= KC_DOT, B_3_R5= HOM_SC   , B_3_R6= KC_ENT
+   ,B_4_R0=RMAGIC , B_4_R1= NAV_ET, B_4_R2= KC_NO , B_4_R3= KC_NO    , B_4_R4= KC_NO , B_4_R5=GC(KC_LEFT),B_4_R6=GC(KC_RGHT)
 };
 #else
 enum {
