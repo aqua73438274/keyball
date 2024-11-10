@@ -158,10 +158,10 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defin
         case HOM_Y: { MAGIC_STRING("d",         KC_NO); } break;
         case  KC_Z: { MAGIC_STRING("y",         KC_NO); } break;
         
-        // case C(KC_TAB):  { MAGIC_STRING(SS_LCTL("\t") ,   C(KC_TAB)); } break;
-        // case A(KC_TAB):  { MAGIC_STRING(SS_LALT("\t") ,   A(KC_TAB)); } break;
-        // case C(KC_PGDN): { MAGIC_STRING(SS_LCTL(SS_TAP(X_PGDN)),  C(KC_PGDN)); } break;
-        // case GS(KC_RGHT):{ MAGIC_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_RIGHT))), GS(KC_RGHT)); } break;
+        case C(KC_TAB):  { MAGIC_STRING(SS_LCTL("\t") ,   C(KC_TAB)); } break;
+        case A(KC_TAB):  { MAGIC_STRING(SS_LALT("\t") ,   A(KC_TAB)); } break;
+        case C(KC_PGDN): { MAGIC_STRING(SS_LCTL(SS_TAP(X_PGDN)),  C(KC_PGDN)); } break;
+        case GS(KC_RGHT):{ MAGIC_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_RIGHT))), GS(KC_RGHT)); } break;
 
 
     }
@@ -196,10 +196,10 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defi
         case HOM_Y: { MAGIC_STRING("y",         KC_NO); } break;
         case  KC_Z: { MAGIC_STRING("z",         KC_NO); } break;
         
-        // case C(KC_TAB):  { MAGIC_STRING(SS_LCTL("\t") ,   C(KC_TAB)); } break;
-        // case A(KC_TAB):  { MAGIC_STRING(SS_LALT("\t") ,   A(KC_TAB)); } break;
-        // case C(KC_PGDN): { MAGIC_STRING(SS_LCTL(SS_TAP(X_PGDN)),  C(KC_PGDN)); } break;
-        // case GS(KC_RGHT):{ MAGIC_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_RIGHT))), GS(KC_RGHT)); } break;
+        case C(KC_TAB):  { MAGIC_STRING(SS_LCTL("\t") ,   C(KC_TAB)); } break;
+        case A(KC_TAB):  { MAGIC_STRING(SS_LALT("\t") ,   A(KC_TAB)); } break;
+        case C(KC_PGDN): { MAGIC_STRING(SS_LCTL(SS_TAP(X_PGDN)),  C(KC_PGDN)); } break;
+        case GS(KC_RGHT):{ MAGIC_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_RIGHT))), GS(KC_RGHT)); } break;
     }
 }
 
