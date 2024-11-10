@@ -213,7 +213,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
   
   if (record->event.pressed) {
     switch (keycode) {
+#ifdef A2J_ENABLE
       case OUT_TOG:  set_jis_mode(!is_jis_mode()); return false;
+#endif  // A2J_ENABLEm
       case UPDIR:    SEND_STRING_DELAY("../", TAP_CODE_DELAY); return false;
       case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); } return false;
       case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());} return false;
@@ -224,7 +226,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
     return true;
   }
 
+#ifdef A2J_ENABLE
   return process_record_user_a2j(keycode, record);
+#else
+  return true
+#endif  // A2J_ENABLE
 }
 
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE

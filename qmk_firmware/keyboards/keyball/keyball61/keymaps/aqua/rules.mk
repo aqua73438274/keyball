@@ -21,7 +21,7 @@ REPEAT_KEY_ENABLE = yes
 #ALT_KEYMAP_DISEBLE #for use qwerty layout
 A2J_ENABLE ?= yes
 ACHORDION_ENABLE ?= yes
-CAPS_WORD_ENABLE ?= yes
+CAPS_WORD_ENABLE ?= no
 LAYER_LOCK_ENABLE ?= yes
 
 A2J_ENABLE ?= yes
