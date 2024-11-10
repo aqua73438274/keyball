@@ -5,6 +5,14 @@ OLED_ENABLE = no
 # for debug
 #CONSOLE_ENABLE = yes
 
+# for size down
+OPT_DEFS += -Os
+UNICODE_ENABLE = no
+UNICODEMAP_ENABLE = no
+UCIS_ENABLE = no
+CONSOLE_ENABLE ?= no
+GRAVE_ESC_ENABLE ?= no
+NKRO_ENABLE ?= no
 
 # aqua settings
 COMBO_ENABLE = yes
@@ -14,7 +22,7 @@ REPEAT_KEY_ENABLE = yes
 A2J_ENABLE ?= yes
 ACHORDION_ENABLE ?= yes
 CAPS_WORD_ENABLE ?= yes
-LAYER_LOCK_ENABLE = no
+LAYER_LOCK_ENABLE ?= yes
 
 A2J_ENABLE ?= yes
 ifeq ($(strip $(A2J_ENABLE)), yes)
