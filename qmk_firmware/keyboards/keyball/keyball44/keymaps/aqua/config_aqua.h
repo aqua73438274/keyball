@@ -55,7 +55,7 @@ enum custom_keycodes {
 // Short aliases for home row mods and other tap-hold keys.
 enum {
 
-#ifndef ALT_KEYMAP_DISEBLE
+#ifdef ALT_KEYMAP_ENABLE
      HOM_E  = LT(SYM, KC_E)
     ,HOM_I  = LALT_T(KC_I)
     ,HOM_A  = LSFT_T(KC_A)
@@ -96,7 +96,7 @@ enum {
     ,NAV_ET = LT(NAV, KC_ENT)
 };
 
-#ifndef ALT_KEYMAP_DISEBLE
+#ifdef ALT_KEYMAP_ENABLE
 //aliases for setting combos easily
 enum {
     //Left
