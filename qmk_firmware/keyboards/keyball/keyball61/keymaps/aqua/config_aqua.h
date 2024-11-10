@@ -25,7 +25,6 @@
 #define LAYER_LOCK_IDLE_TIMEOUT 60000
 
 // Combos
-#define COMBO_TERM 80 // ミリ秒
 #define COMBO_ONLY_FROM_LAYER 0
 
 enum layeLs {
