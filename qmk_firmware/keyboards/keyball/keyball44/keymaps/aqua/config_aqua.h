@@ -83,8 +83,8 @@ enum {
     ,HOM_Z  = LGUI_T(KC_Z)
     ,HOM_BL = LT(WIN,KC_BSLS)
     ,HOM_QT = LT(WIN, KC_QUOT)
+    ,HOM_N  = KC_N
 #endif
-
     ,NUM_V   = LT(NUM, KC_V)
     ,WIN_MN = LT(WIN, KC_MINS)
 
