@@ -33,7 +33,7 @@ const uint16_t AML_TIMEOUT_MIN = 100;
 const uint16_t AML_TIMEOUT_MAX = 1000;
 const uint16_t AML_TIMEOUT_QU  = 50;   // Quantization Unit
 
-const uint16_t AML_ACTIVATE_THRESHOLD = 50;
+const uint16_t AML_ACTIVATE_THRESHOLD = 5;
 
 static const char BL = '\xB0'; // Blank indicator character
 #ifdef OLED_ENABLE
