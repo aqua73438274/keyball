@@ -96,6 +96,7 @@ uint16_t achordion_streak_chord_timeout(
 }
 #endif  // ACHORDION_ENABLE
 
+#ifdef ALT_KEYMAP_ENABLE
 // An enhanced version of SEND_STRING: if Caps Word is active, the Shift key is
 // held while sending the string. Additionally, the last key is set such that if
 // the Repeat Key is pressed next, it produces `repeat_keycode`.
@@ -193,6 +194,7 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defin
         
     }
 }
+#endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
 #ifdef ACHORDION_ENABLE
@@ -207,9 +209,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
 #ifdef A2J_ENABLE
       case OUT_TOG:  set_jis_mode(!is_jis_mode()); return false;
 #endif  // A2J_ENABLEm
+#ifdef ALT_KEYMAP_ENABLE
       case UPDIR:    SEND_STRING_DELAY("../", TAP_CODE_DELAY); return false;
       case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); } return false;
       case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());} return false;
+#endif
     }
   }
 

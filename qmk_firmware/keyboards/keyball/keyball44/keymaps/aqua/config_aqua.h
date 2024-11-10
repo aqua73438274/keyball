@@ -117,7 +117,7 @@ enum {
     //Left
     B_1_L1= KC_GRV, B_1_L2= KC_Q  , B_1_L3= KC_W  , B_1_L4= KC_E   , B_1_L5= KC_R  , B_1_L6= KC_T
    ,B_2_L1= KC_TAB, B_2_L2= HOM_A , B_2_L3= HOM_S , B_2_L4= HOM_D  , B_2_L5= HOM_F , B_2_L6= KC_G
-   ,B_3_L1= WIN_AT, B_3_L2= HOM_Z , B_3_L3= KC_X  , B_3_L4= KC_C   , B_3_L5= NUM_V , B_3_L6= KC_B
+   ,B_3_L1= KC_AT , B_3_L2= HOM_Z , B_3_L3= KC_X  , B_3_L4= KC_C   , B_3_L5= NUM_V , B_3_L6= KC_B
                   , B_4_L1= KC_NO , B_4_L2= WIN_DW, B_4_L3= WIN_UP , B_4_L4=KC_LGUI, B_4_L5= SFT_SP , B_4_L6= NUM_MN
 
     //Right
