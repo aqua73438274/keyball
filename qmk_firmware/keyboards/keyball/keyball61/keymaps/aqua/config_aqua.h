@@ -129,7 +129,7 @@ enum {
     B_1_L1= KC_DLR , B_1_L2= KC_V  , B_1_L3= KC_K  , B_1_L4= KC_L    , B_1_L5= KC_C  , B_1_L6= KC_Z
    ,B_2_L1= KC_BSPC, B_2_L2= HOM_S , B_2_L3= HOM_T , B_2_L4= HOM_R   , B_2_L5= HOM_Y , B_2_L6= KC_D
    ,B_3_L1= KC_AT  , B_3_L2= HOM_X , B_3_L3= KC_J  , B_3_L4= KC_M    , B_3_L5= NUM_W , B_3_L6= KC_G  , B_3_L7= ALT_T(KC_LNG2)
-   ,B_4_L1=KC_LEFT , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4=KC_RGHT  , B_4_L5= WIN_MN, B_4_L6= SFT_SP, B_4_L7= LMAGIC
+   ,B_4_L1= KC_LEFT, B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4= KC_RGHT , B_4_L5= WIN_MN, B_4_L6= SFT_SP, B_4_L7= LMAGIC
 
     //Right
    ,                B_1_R1= KC_P  , B_1_R2= KC_F  , B_1_R3= KC_O     , B_1_R4= KC_U  , B_1_R5= KC_Q     , B_1_R6= KC_QUOT
