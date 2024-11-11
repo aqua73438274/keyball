@@ -18,8 +18,8 @@ NKRO_ENABLE ?= no
 COMBO_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
 
-#for use qwerty layout
-ALT_KEYMAP_ENABLE = yes
+# for use qwerty layout
+# ALT_KEYMAP_ENABLE = yes
 A2J_ENABLE ?= yes
 ACHORDION_ENABLE ?= yes
 CAPS_WORD_ENABLE ?= yes

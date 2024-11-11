@@ -1,6 +1,8 @@
 #ifndef _AQUA_H_
 #define _AQUA_H_
 
+#define ALT_KEYMAP_ENABLE 1
+
 #define GC(key) RGUI(RCTL(key))
 #define GS(key) RGUI(RSFT(key))
 
