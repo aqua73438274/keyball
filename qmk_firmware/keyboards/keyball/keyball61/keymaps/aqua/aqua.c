@@ -158,7 +158,7 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defi
         case HOM_Y: { MAGIC_STRING("d",         KC_NO); } break;
         case  KC_Z: { MAGIC_STRING("y",         KC_NO); } break;
 
-
+        case KC_SPC:{ MAGIC_STRING(" ",         KC_NO); } break;
     }
 }
  
@@ -191,6 +191,7 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defin
         case HOM_Y: { MAGIC_STRING("y",         KC_NO); } break;
         case  KC_Z: { MAGIC_STRING("z",         KC_NO); } break;
         
+        case KC_SPC:{ MAGIC_STRING(" ",         KC_NO); } break;
     }
 }
 
@@ -208,8 +209,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
       case OUT_TOG:  set_jis_mode(!is_jis_mode()); return false;
 #endif  // A2J_ENABLEm
       case UPDIR:    SEND_STRING_DELAY("../", TAP_CODE_DELAY); return false;
-      case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); } return false;
-      case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());} return false;
+      case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC);} return false;
+      case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());set_last_keycode(KC_SPC);} return false;
     }
   }
 
