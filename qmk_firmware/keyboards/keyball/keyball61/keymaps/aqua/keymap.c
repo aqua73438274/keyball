@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
     ,                  KC_BTN5 , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
     ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , XXXXXXX , _______
-    ,         _______ , _______, XXXXXXX  , XXXXXXX  , _______  , _______ , _______
+    ,         _______ , NAV_ET , XXXXXXX  , XXXXXXX  , _______  , _______ , _______
   )
 };
 // clang-format on
