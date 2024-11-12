@@ -13,6 +13,7 @@ UCIS_ENABLE = no
 CONSOLE_ENABLE ?= no
 GRAVE_ESC_ENABLE ?= no
 NKRO_ENABLE ?= no
+AVR_USE_MINIMAL_PRINTF = yes
 
 # aqua settings
 COMBO_ENABLE = yes
