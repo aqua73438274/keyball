@@ -1,7 +1,7 @@
 #ifndef _AQUA_H_
 #define _AQUA_H_
 
-#define ALT_KEYMAP_ENABLE 1
+#define ALT_KEYMAP_ENABLE 0
 
 #define GC(key) RGUI(RCTL(key))
 #define GS(key) RGUI(RSFT(key))
@@ -63,6 +63,7 @@ enum {
     ,HOM_A  = LSFT_T(KC_A)
     ,HOM_N  = LCTL_T(KC_N)
     ,HOM_Y  = RCTL_T(KC_Y)
+    ,HOM_D  = LT(FUN,KC_D)
     ,HOM_R  = RSFT_T(KC_R)
     ,HOM_T  = LALT_T(KC_T)
     ,HOM_S  = LT(SYM, KC_S)
@@ -78,6 +79,7 @@ enum {
     ,HOM_S  = LALT_T(KC_S)
     ,HOM_D  = LSFT_T(KC_D)
     ,HOM_F  = LCTL_T(KC_F)
+    ,HOM_G  = LT(FUN,KC_G)    
     ,HOM_J  = RCTL_T(KC_J)
     ,HOM_K  = RSFT_T(KC_K)
     ,HOM_L  = LALT_T(KC_L)
@@ -103,7 +105,7 @@ enum {
 enum {
     //Left
     B_1_L1= KC_DLR , B_1_L2= KC_V  , B_1_L3= KC_K  , B_1_L4= KC_L    , B_1_L5= KC_C  , B_1_L6= KC_Z
-   ,B_2_L1= KC_BSPC, B_2_L2= HOM_S , B_2_L3= HOM_T , B_2_L4= HOM_R   , B_2_L5= HOM_Y , B_2_L6= KC_D
+   ,B_2_L1= KC_BSPC, B_2_L2= HOM_S , B_2_L3= HOM_T , B_2_L4= HOM_R   , B_2_L5= HOM_Y , B_2_L6= HOM_D
    ,B_3_L1= KC_AT  , B_3_L2= HOM_X , B_3_L3= KC_J  , B_3_L4= KC_M    , B_3_L5= NUM_W , B_3_L6= KC_G 
                    , B_4_L1= KC_NO , B_4_L2= WIN_DW, B_4_L3= WIN_UP  , B_4_L4= WIN_MN, B_4_L5= SFT_SP, B_4_L6= LMAGIC
 
@@ -118,7 +120,7 @@ enum {
 enum {
     //Left
     B_1_L1= KC_GRV, B_1_L2= KC_Q  , B_1_L3= KC_W  , B_1_L4= KC_E   , B_1_L5= KC_R  , B_1_L6= KC_T
-   ,B_2_L1= KC_TAB, B_2_L2= HOM_A , B_2_L3= HOM_S , B_2_L4= HOM_D  , B_2_L5= HOM_F , B_2_L6= KC_G
+   ,B_2_L1= KC_TAB, B_2_L2= HOM_A , B_2_L3= HOM_S , B_2_L4= HOM_D  , B_2_L5= HOM_F , B_2_L6= HOM_G
    ,B_3_L1= KC_AT , B_3_L2= HOM_Z , B_3_L3= KC_X  , B_3_L4= KC_C   , B_3_L5= NUM_V , B_3_L6= KC_B
                   , B_4_L1= KC_NO , B_4_L2= WIN_DW, B_4_L3= WIN_UP , B_4_L4=KC_LGUI, B_4_L5= SFT_SP , B_4_L6= NUM_MN
 

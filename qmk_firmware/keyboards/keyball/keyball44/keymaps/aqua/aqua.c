@@ -59,8 +59,8 @@ bool achordion_chord(uint16_t tap_hold_keycode,
 
 uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
   switch (tap_hold_keycode) {
-    case NAV_ET:  return 100;  // Use a timeout of 800 ms.
-    case B_3_R5:  return 100;  // Use a timeout of 800 ms.
+    case NAV_ET:  return 200;  // Use a timeout of 800 ms.
+    case B_3_R5:  return 200;  // Use a timeout of 800 ms.
     default: return 700;  // Use a timeout of 800 ms.
   }
 }
@@ -135,7 +135,7 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defi
         case HOM_A: { MAGIC_STRING("a",         KC_NO); } break;
         case  KC_B: { MAGIC_STRING("b",         KC_NO); } break;
         case  KC_C: { MAGIC_STRING("y",         KC_NO); } break;
-        case  KC_D: { MAGIC_STRING("y",         KC_NO); } break;
+        case HOM_D: { MAGIC_STRING("y",         KC_NO); } break;
         case HOM_E: { MAGIC_STRING("e",         KC_NO); } break;
         case  KC_F: { MAGIC_STRING("f",         KC_NO); } break;
         case  KC_G: { MAGIC_STRING("y",         KC_NO); } break;
@@ -170,7 +170,7 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defin
         case HOM_A: { MAGIC_STRING("o",         KC_NO); } break;
         case  KC_B: { MAGIC_STRING("p",         KC_NO); } break;
         case  KC_C: { MAGIC_STRING("c",         KC_NO); } break;
-        case  KC_D: { MAGIC_STRING("d",         KC_NO); } break;
+        case HOM_D: { MAGIC_STRING("d",         KC_NO); } break;
         case HOM_E: { MAGIC_STRING("u",         KC_NO); } break;
         case  KC_F: { MAGIC_STRING("n",         KC_NO); } break;
         case  KC_G: { MAGIC_STRING("g",         KC_NO); } break;
@@ -216,7 +216,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
 #ifdef ALT_KEYMAP_ENABLE
       case UPDIR:    SEND_STRING_DELAY("../", TAP_CODE_DELAY); return false;
       case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC);} return false;
-      case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());set_last_keycode(KC_SPC);} return false;
+      case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());set_last_keycode(KC_NO);} return false;
 #endif
     }
   }
