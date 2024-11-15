@@ -59,15 +59,15 @@ enum {
      HOM_E  = LT(SYM, KC_E)
     ,HOM_I  = LALT_T(KC_I)
     ,HOM_A  = LSFT_T(KC_A)
-    ,HOM_H  = LCTL_T(KC_N)
-    ,HOM_G  = LT(FUN,KC_D)
-    ,HOM_T  = RCTL_T(KC_Y)
-    ,HOM_S  = RSFT_T(KC_R)
-    ,HOM_R  = LALT_T(KC_T)
-    ,HOM_N  = LT(SYM, KC_S)
-    ,HOM_P  = LGUI_T(KC_X)
+    ,HOM_H  = LCTL_T(KC_H)
+    ,HOM_G  = LT(FUN,KC_G)
+    ,HOM_T  = RCTL_T(KC_T)
+    ,HOM_S  = RSFT_T(KC_S)
+    ,HOM_R  = LALT_T(KC_R)
+    ,HOM_N  = LT(SYM, KC_S]N)
+    ,HOM_P  = LGUI_T(KC_P)
     ,HOM_SC = LT(WIN,KC_SCLN)
-    ,NUM_D  = LT(NUM, KC_W)
+    ,NUM_D  = LT(NUM, KC_D)
     ,HOM_SL = LGUI_T(KC_SLSH)
 #else
     //For qwerty
@@ -98,8 +98,6 @@ enum {
 #ifndef ALT_KEYMAP_DISEBLE
 //aliases for setting combos easily
 enum {
-
-// enum {
     //Left
     B_1_L1= KC_DLR , B_1_L2= KC_X  , B_1_L3= KC_W  , B_1_L4= KC_M    , B_1_L5= KC_B  , B_1_L6= KC_Z
    ,B_2_L1= KC_BSPC, B_2_L2= HOM_N , B_2_L3= HOM_R , B_2_L4= HOM_S   , B_2_L5= HOM_T , B_2_L6= HOM_G

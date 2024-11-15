@@ -150,7 +150,7 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defi
         case  KC_Q: { MAGIC_STRING("q",         KC_NO); } break;
         case HOM_R: { MAGIC_STRING("l",         KC_NO); } break;
         case HOM_S: { MAGIC_STRING("c",         KC_NO); } break;
-        case HOM_T: { MAGIC_STRING("gz",        KC_NO); } break;
+        case HOM_T: { MAGIC_STRING("z",        KC_NO); } break;
         case  KC_U: { MAGIC_STRING("u",         KC_NO); } break;
         case  KC_V: { MAGIC_STRING("b",         KC_NO); } break;
         case  KC_W: { MAGIC_STRING("l",         KC_NO); } break;
