@@ -66,7 +66,7 @@ enum {
     ,HOM_T  = RCTL_T(KC_T)
     ,HOM_S  = RSFT_T(KC_S)
     ,HOM_R  = LALT_T(KC_R)
-    ,HOM_N  = LT(SYM, KC_S]N)
+    ,HOM_N  = LT(SYM, KC_N)
     ,HOM_P  = LGUI_T(KC_P)
     ,HOM_SC = LT(WIN,KC_SCLN)
     ,NUM_D  = LT(NUM, KC_D)
