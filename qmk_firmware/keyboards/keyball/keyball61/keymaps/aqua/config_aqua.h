@@ -56,32 +56,19 @@ enum custom_keycodes {
 enum {
 
 #ifndef ALT_KEYMAP_DISEBLE
-    //  HOM_E  = LT(SYM, KC_E)
-    // ,HOM_I  = LALT_T(KC_I)
-    // ,HOM_A  = LSFT_T(KC_A)
-    // ,HOM_O  = LCTL_T(KC_O)
-    // ,HOM_T  = RCTL_T(KC_T)
-    // ,HOM_N  = RSFT_T(KC_N)
-    // ,HOM_S  = LALT_T(KC_S)
-    // ,HOM_H  = LT(SYM, KC_H)
-    // ,HOM_Z  = LGUI_T(KC_Z)
-    // ,HOM_MS = LT(WIN,KC_SCLN)
-    // ,NUM_V   = LT(NUM, KC_V)
-
      HOM_E  = LT(SYM, KC_E)
     ,HOM_I  = LALT_T(KC_I)
     ,HOM_A  = LSFT_T(KC_A)
-    ,HOM_N  = LCTL_T(KC_N)
-    ,HOM_Y  = RCTL_T(KC_Y)
-    ,HOM_R  = RSFT_T(KC_R)
-    ,HOM_T  = LALT_T(KC_T)
-    ,HOM_S  = LT(SYM, KC_S)
-    ,HOM_MS = LT(WIN,KC_SCLN)
-    ,NUM_SQ = LT(NUM, KC_QUOT)
-    ,HOM_X  = LGUI_T(KC_X)
+    ,HOM_H  = LCTL_T(KC_N)
+    ,HOM_G  = LT(FUN,KC_D)
+    ,HOM_T  = RCTL_T(KC_Y)
+    ,HOM_S  = RSFT_T(KC_R)
+    ,HOM_R  = LALT_T(KC_T)
+    ,HOM_N  = LT(SYM, KC_S)
+    ,HOM_P  = LGUI_T(KC_X)
+    ,HOM_SC = LT(WIN,KC_SCLN)
+    ,NUM_D  = LT(NUM, KC_W)
     ,HOM_SL = LGUI_T(KC_SLSH)
-    ,HOM_SC = LT(WIN, KC_SCLN)
-    ,NUM_W  = LT(NUM, KC_W)
 #else
     //For qwerty
      HOM_A  = LT(SYM, KC_A)
@@ -113,28 +100,16 @@ enum {
 enum {
 
 // enum {
-//     //Left
-//     B_1_L1= KC_DLR, B_1_L2= KC_Q  , B_1_L3= KC_Y  , B_1_L4= KC_U    , B_1_L5=KC_COMM, B_1_L6= KC_DOT
-//    ,B_2_L1= KC_TAB, B_2_L2= HOM_E , B_2_L3= HOM_I , B_2_L4= HOM_A   , B_2_L5= HOM_O , B_2_L6= KC_L
-//    ,B_3_L1= WIN_AT, B_3_L2= HOM_Z , B_3_L3= KC_X  , B_3_L4= KC_C    , B_3_L5= NUM_V , B_3_L6= KC_SLSH, B_3_L7= ALT_T(KC_LNG2)
-//    ,B_4_L1= WIN_DW, B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4= KC_LGUI , B_4_L5= SFT_SP, B_4_L6= NUM_MN, B_4_L7= NUM_MN
-
-//     //Right
-//    ,                B_1_R1= KC_F  , B_1_R2= KC_W  , B_1_R3= KC_M      , B_1_R4= KC_R  , B_1_R5= KC_P     , B_1_R6= KC_GRAVE
-//    ,                B_2_R1= KC_K  , B_2_R2= HOM_T , B_2_R3= HOM_N     , B_2_R4= HOM_S , B_2_R5= HOM_H    , B_2_R6= KC_B
-//    ,B_3_R0=KC_LNG1, B_3_R1= KC_G  , B_3_R2= KC_D  , B_3_R3= KC_MS_BTN1, B_3_R4= KC_J  , B_3_R5= HOM_MS   , B_3_R6= KC_QUOT
-//    ,B_4_R0= NUM_BS, B_4_R1= NAV_ET, B_4_R2= KC_NO , B_4_R3= KC_NO     , B_4_R4= KC_NO , B_4_R5=KC_MS_BTN2, B_4_R6= KC_NO
-// };
     //Left
-    B_1_L1= KC_DLR , B_1_L2= KC_V  , B_1_L3= KC_K  , B_1_L4= KC_L    , B_1_L5= KC_C  , B_1_L6= KC_Z
-   ,B_2_L1= KC_BSPC, B_2_L2= HOM_S , B_2_L3= HOM_T , B_2_L4= HOM_R   , B_2_L5= HOM_Y , B_2_L6= KC_D
-   ,B_3_L1= KC_AT  , B_3_L2= HOM_X , B_3_L3= KC_J  , B_3_L4= KC_M    , B_3_L5= NUM_W , B_3_L6= KC_G  , B_3_L7= ALT_T(KC_LNG2)
+    B_1_L1= KC_DLR , B_1_L2= KC_X  , B_1_L3= KC_W  , B_1_L4= KC_M    , B_1_L5= KC_B  , B_1_L6= KC_Z
+   ,B_2_L1= KC_BSPC, B_2_L2= HOM_N , B_2_L3= HOM_R , B_2_L4= HOM_S   , B_2_L5= HOM_T , B_2_L6= HOM_G
+   ,B_3_L1= KC_AT  , B_3_L2= HOM_P , B_3_L3= KC_L  , B_3_L4= KC_C    , B_3_L5= NUM_D , B_3_L6= KC_V  , B_3_L7= ALT_T(KC_LNG2)
    ,B_4_L1= KC_LEFT, B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4= KC_RGHT , B_4_L5= WIN_MN, B_4_L6= SFT_SP, B_4_L7= LMAGIC
 
     //Right
-   ,                B_1_R1= KC_P  , B_1_R2= KC_F  , B_1_R3= KC_O     , B_1_R4= KC_U  , B_1_R5= KC_Q     , B_1_R6= KC_QUOT
-   ,                B_2_R1= KC_H  , B_2_R2= HOM_N , B_2_R3= HOM_A    , B_2_R4= HOM_I , B_2_R5= HOM_E    , B_2_R6= HOM_SL
-   ,B_3_R0=KC_LNG1, B_3_R1= KC_B  , B_3_R2=KC_COMM, B_3_R3= KC_BTN1  , B_3_R4= KC_DOT, B_3_R5= HOM_SC   , B_3_R6= KC_ENT
+   ,                B_1_R1= KC_J  , B_1_R2= KC_F  , B_1_R3= KC_O     , B_1_R4= KC_U  , B_1_R5= KC_Q     , B_1_R6= KC_QUOT
+   ,                B_2_R1= KC_Y  , B_2_R2= HOM_H , B_2_R3= HOM_A    , B_2_R4= HOM_I , B_2_R5= HOM_E    , B_2_R6= HOM_SL
+   ,B_3_R0=KC_LNG1, B_3_R1=KC_COMM, B_3_R2= KC_K  , B_3_R3= KC_BTN1  , B_3_R4= KC_DOT, B_3_R5= HOM_SC   , B_3_R6= KC_ENT
    ,B_4_R0=RMAGIC , B_4_R1= NAV_ET, B_4_R2= KC_NO , B_4_R3= KC_NO    , B_4_R4= KC_NO , B_4_R5=GC(KC_LEFT),B_4_R6=GC(KC_RGHT)
 };
 #else
