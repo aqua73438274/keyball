@@ -243,6 +243,18 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   keyball_set_scroll_mode(get_highest_layer(state) == 1 || get_highest_layer(state) == WIN);
   // keyball_set_scroll_mode(get_highest_layer(state) == 1);
 
+  // checks highest layer other than target layer
+  switch(get_highest_layer(remove_auto_mouse_layer(state, true))) {
+      case WIN:
+          // remove_auto_mouse_target must be called to adjust state *before* setting enable
+          state = remove_auto_mouse_layer(state, false);
+          set_auto_mouse_enable(false);
+          break;
+      default:
+          set_auto_mouse_enable(true);
+          break;
+  }
+  
   // レイヤーとLEDを連動させる
   switch (get_highest_layer(state)) {
     case MOS:
