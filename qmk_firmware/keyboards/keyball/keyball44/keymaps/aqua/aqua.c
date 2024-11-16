@@ -135,7 +135,7 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defi
         case HOM_A: { MAGIC_STRING("a",         KC_NO); } break;
         case  KC_B: { MAGIC_STRING("m",         KC_NO); } break;
         case  KC_C: { MAGIC_STRING("k",         KC_NO); } break;
-        case NUM_D: { MAGIC_STRING("r",         KC_NO); } break;
+        case  KC_D: { MAGIC_STRING("r",         KC_NO); } break;
         case HOM_E: { MAGIC_STRING("e",         KC_NO); } break;
         case  KC_F: { MAGIC_STRING("f",         KC_NO); } break;
         case HOM_G: { MAGIC_STRING("z",         KC_NO); } break;
@@ -144,7 +144,7 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defi
         case  KC_J: { MAGIC_STRING("j",         KC_NO); } break;
         case  KC_K: { MAGIC_STRING("c",         KC_NO); } break;
         case  KC_L: { MAGIC_STRING("d",         KC_NO); } break;
-        case  KC_M: { MAGIC_STRING("b",         KC_NO); } break;
+        case NUM_M: { MAGIC_STRING("b",         KC_NO); } break;
         case HOM_N: { MAGIC_STRING("n",         KC_NO); } break;
         case  KC_O: { MAGIC_STRING("o",         KC_NO); } break;
         case HOM_P: { MAGIC_STRING("x",         KC_NO); } break;
@@ -169,7 +169,7 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defin
         case HOM_A: { MAGIC_STRING("o",         KC_NO); } break;
         case  KC_B: { MAGIC_STRING("b",         KC_NO); } break;
         case  KC_C: { MAGIC_STRING("c",         KC_NO); } break;
-        case NUM_D: { MAGIC_STRING("d",         KC_NO); } break;
+        case  KC_D: { MAGIC_STRING("d",         KC_NO); } break;
         case HOM_E: { MAGIC_STRING("q",         KC_NO); } break;
         case  KC_F: { MAGIC_STRING("y",         KC_NO); } break;
         case HOM_G: { MAGIC_STRING("g",         KC_NO); } break;
@@ -178,7 +178,7 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defin
         case  KC_J: { MAGIC_STRING("y",         KC_NO); } break;
         case  KC_K: { MAGIC_STRING("k",         KC_NO); } break;
         case  KC_L: { MAGIC_STRING("l",         KC_NO); } break;
-        case  KC_M: { MAGIC_STRING("m",         KC_NO); } break;
+        case NUM_M: { MAGIC_STRING("m",         KC_NO); } break;
         case HOM_N: { MAGIC_STRING("y",         KC_NO); } break;
         case  KC_O: { MAGIC_STRING("a",         KC_NO); } break;
         case HOM_P: { MAGIC_STRING("p",         KC_NO); } break;
