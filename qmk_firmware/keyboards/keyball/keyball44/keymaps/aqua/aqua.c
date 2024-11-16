@@ -173,7 +173,7 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defin
         case HOM_E: { MAGIC_STRING("q",         KC_NO); } break;
         case  KC_F: { MAGIC_STRING("y",         KC_NO); } break;
         case HOM_G: { MAGIC_STRING("g",         KC_NO); } break;
-        case HOM_H: { MAGIC_STRING("y",         KC_NO); } break;
+        case HOM_H: { MAGIC_STRING("h",         KC_NO); } break;
         case HOM_I: { MAGIC_STRING("u",         KC_NO); } break;
         case  KC_J: { MAGIC_STRING("y",         KC_NO); } break;
         case  KC_K: { MAGIC_STRING("k",         KC_NO); } break;
