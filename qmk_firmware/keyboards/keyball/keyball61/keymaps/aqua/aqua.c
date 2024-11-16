@@ -14,6 +14,7 @@
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
+    //  shift
     case B_2_L4:
     case B_2_R3:
       return TAPPING_TERM + 15;
@@ -28,6 +29,7 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t* record) {
   // lead to missed triggers in fast typing. Here, returning 0 means we
   // instead want to "force hold" and disable key repeating.
   switch (keycode) {
+    //  ctrl
     case B_2_L5:
     case B_2_R2:
       return QUICK_TAP_TERM;  // Enable key repeating.
@@ -142,15 +144,15 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defi
         case HOM_I: { MAGIC_STRING("i",         KC_NO); } break;
         case  KC_J: { MAGIC_STRING("j",         KC_NO); } break;
         case  KC_K: { MAGIC_STRING("k",         KC_NO); } break;
-        case  KC_L: { MAGIC_STRING("w",         KC_NO); } break;
+        case  KC_L: { MAGIC_STRING("m",         KC_NO); } break;
         case  KC_M: { MAGIC_STRING("v",         KC_NO); } break;
         case HOM_N: { MAGIC_STRING("p",         KC_NO); } break;
         case  KC_O: { MAGIC_STRING("o",         KC_NO); } break;
         case HOM_P: { MAGIC_STRING("x",         KC_NO); } break;
         case  KC_Q: { MAGIC_STRING("q",         KC_NO); } break;
-        case HOM_R: { MAGIC_STRING("l",         KC_NO); } break;
+        case HOM_R: { MAGIC_STRING("m",         KC_NO); } break;
         case HOM_S: { MAGIC_STRING("c",         KC_NO); } break;
-        case HOM_T: { MAGIC_STRING("z",        KC_NO); } break;
+        case HOM_T: { MAGIC_STRING("g",        KC_NO); } break;
         case  KC_U: { MAGIC_STRING("u",         KC_NO); } break;
         case  KC_V: { MAGIC_STRING("b",         KC_NO); } break;
         case  KC_W: { MAGIC_STRING("l",         KC_NO); } break;

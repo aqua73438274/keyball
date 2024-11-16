@@ -143,15 +143,15 @@ static void process_right_magic(uint16_t keycode, uint8_t mods) { // LMAGIC defi
         case HOM_I: { MAGIC_STRING("i",         KC_NO); } break;
         case  KC_J: { MAGIC_STRING("j",         KC_NO); } break;
         case  KC_K: { MAGIC_STRING("k",         KC_NO); } break;
-        case  KC_L: { MAGIC_STRING("w",         KC_NO); } break;
+        case  KC_L: { MAGIC_STRING("m",         KC_NO); } break;
         case  KC_M: { MAGIC_STRING("v",         KC_NO); } break;
         case HOM_N: { MAGIC_STRING("p",         KC_NO); } break;
         case  KC_O: { MAGIC_STRING("o",         KC_NO); } break;
         case HOM_P: { MAGIC_STRING("x",         KC_NO); } break;
         case  KC_Q: { MAGIC_STRING("q",         KC_NO); } break;
-        case HOM_R: { MAGIC_STRING("l",         KC_NO); } break;
+        case HOM_R: { MAGIC_STRING("m",         KC_NO); } break;
         case HOM_S: { MAGIC_STRING("c",         KC_NO); } break;
-        case HOM_T: { MAGIC_STRING("gz",        KC_NO); } break;
+        case HOM_T: { MAGIC_STRING("g",        KC_NO); } break;
         case  KC_U: { MAGIC_STRING("u",         KC_NO); } break;
         case  KC_V: { MAGIC_STRING("b",         KC_NO); } break;
         case  KC_W: { MAGIC_STRING("l",         KC_NO); } break;
@@ -192,7 +192,7 @@ static void process_left_magic(uint16_t keycode, uint8_t mods) { // RMAGIC defin
         case  KC_X: { MAGIC_STRING("x",         KC_NO); } break;
         case  KC_Y: { MAGIC_STRING("eah",       KC_NO); } break;
         case  KC_Z: { MAGIC_STRING("z",         KC_NO); } break;
-        
+
         case KC_SPC:{ MAGIC_STRING(" ",         KC_NO); } break;
 
     }

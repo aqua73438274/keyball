@@ -102,7 +102,7 @@ enum {
 //aliases for setting combos easily
 enum {
     //Left
-    B_1_L1= KC_DLR , B_1_L2= KC_X  , B_1_L3= KC_W  , B_1_L4= KC_M    , B_1_L5= KC_B  , B_1_L6= KC_Z
+    B_1_L1= KC_DLR , B_1_L2= KC_X  , B_1_L3= KC_M  , B_1_L4= KC_W    , B_1_L5= KC_B  , B_1_L6= KC_Z
    ,B_2_L1= KC_BSPC, B_2_L2= HOM_N , B_2_L3= HOM_R , B_2_L4= HOM_S   , B_2_L5= HOM_T , B_2_L6= HOM_G
    ,B_3_L1= KC_AT  , B_3_L2= HOM_P , B_3_L3= KC_L  , B_3_L4= KC_C    , B_3_L5= NUM_D , B_3_L6= KC_V 
                    , B_4_L1= KC_NO , B_4_L2= WIN_DW, B_4_L3= WIN_UP  , B_4_L4= WIN_MN, B_4_L5= SFT_SP, B_4_L6= LMAGIC
