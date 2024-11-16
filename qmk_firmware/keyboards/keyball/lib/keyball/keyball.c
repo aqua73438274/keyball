@@ -737,13 +737,13 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             case AML_I50:
                 {
                     uint16_t v = get_auto_mouse_timeout() + 50;
-                    keyball_set_auto_mouse_timeout(MIN(v, AML_TIMEOUT_MAX));
+                    get_auto_mouse_timeout(MIN(v, AML_TIMEOUT_MAX));
                 }
                 break;
             case AML_D50:
                 {
                     uint16_t v = get_auto_mouse_timeout() - 50;
-                    keyball_set_auto_mouse_timeout(MAX(v, AML_TIMEOUT_MIN));
+                    get_auto_mouse_timeout(MAX(v, AML_TIMEOUT_MIN));
                 }
                 break;
 #endif
