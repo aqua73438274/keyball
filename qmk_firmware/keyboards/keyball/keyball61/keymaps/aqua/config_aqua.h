@@ -60,15 +60,15 @@ enum {
     ,HOM_E  = LT(SYM, KC_E)
     ,HOM_I  = LALT_T(KC_I)
     ,HOM_A  = LSFT_T(KC_A)
-    ,HOM_N  = LCTL_T(KC_H)
+    ,HOM_N  = LCTL_T(KC_N)
     ,HOM_G  = LT(FUN,KC_G)
     ,HOM_T  = RCTL_T(KC_T)
     ,HOM_S  = RSFT_T(KC_S)
     ,HOM_R  = LALT_T(KC_R)
-    ,HOM_H  = LT(SYM, KC_N)
+    ,HOM_H  = LT(SYM, KC_H)
     ,HOM_P  = LGUI_T(KC_P)
     ,HOM_DT = LT(WIN,KC_DOT)
-    ,NUM_M  = LT(NUM, KC_D)
+    ,NUM_M  = LT(NUM, KC_M)
 #else
     //For qwerty
      HOM_A  = LT(SYM, KC_A)
