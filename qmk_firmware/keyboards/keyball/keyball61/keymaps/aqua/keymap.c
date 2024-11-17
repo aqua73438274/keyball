@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     , _______   , XXXXXXX, XXXXXXX  , XXXXXXX , XXXXXXX  , XXXXXXX
     , _______   , KC_LGUI, KC_LALT  , KC_LSFT , KC_LCTL  , KC_TAB
     , _______   , C(KC_Z), C(KC_X)  , C(KC_C) , C(KC_V)  , XXXXXXX , XXXXXXX
-    , _______   , _______,  KC_LEFT , KC_RGHT ,C(KC_PGUP), _______ ,C(KC_PGDN)
+    , KC_PGUP   , KC_LEFT,  KC_RGHT , KC_PGDN ,C(KC_PGUP), _______ ,C(KC_PGDN)
 
     ,                   _______, _______, _______, _______, _______ , _______
     ,                   XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX ,  GC(KC_F4)
@@ -113,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
-    , _______, _______, _______, _______, _______, _______, _______
+    , _______, _______, _______, _______, _______, TO(BASE), _______
    
     ,                   _______, _______  , _______  , _______  , _______ , _______
     ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
@@ -125,9 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // clang-format on
 
 #ifdef OLED_ENABLE
-
 #    include "lib/oledkit/oledkit.h"
-
 void oledkit_render_info_user(void) {
     keyball_oled_render_keyinfo();
     keyball_oled_render_ballinfo();

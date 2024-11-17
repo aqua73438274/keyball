@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
-    ,                   _______, _______, _______, _______, _______
+    ,                   _______, _______, _______, TO(BASE), _______
    
     ,                  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
     ,                  KC_BTN5 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
@@ -111,7 +111,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // clang-format on
 
 #ifdef OLED_ENABLE
-
 #    include "lib/oledkit/oledkit.h"
 
 void oledkit_render_info_user(void) {
