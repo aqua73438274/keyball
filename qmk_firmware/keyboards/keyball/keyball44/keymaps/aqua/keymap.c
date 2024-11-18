@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ,[NAV] = LAYOUT_universal(
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  , XXXXXXX
     , _______, KC_LGUI, KC_LALT, KC_LSFT, KC_LCTL  , KC_TAB
-    , _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V)  , XXXXXXX
+    , _______, KC_LGUI, C(KC_X), C(KC_C), C(KC_V)  , XXXXXXX
     ,                   KC_LEFT, KC_RGHT,C(KC_PGUP), _______,C(KC_PGDN)
    
     ,                   XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX ,  GC(KC_F4)
@@ -111,6 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // clang-format on
 
 #ifdef OLED_ENABLE
+
 #    include "lib/oledkit/oledkit.h"
 
 void oledkit_render_info_user(void) {
