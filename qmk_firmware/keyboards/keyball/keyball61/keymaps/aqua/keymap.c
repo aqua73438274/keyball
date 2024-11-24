@@ -38,6 +38,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,          B_4_R0 , B_4_R1 , KC_NO  , KC_NO  , KC_NO  , B_4_R5 , B_4_R6
   )
 
+  ,[MOS] = LAYOUT_universal(
+      _______, _______, _______, _______, _______, _______
+    , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
+    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
+    , _______, _______, _______, _______, _______, TO(BASE), _______
+   
+    ,                   _______, _______  , _______  , _______  , _______ , _______
+    ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
+    ,                  KC_BTN5 , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
+    ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , XXXXXXX , _______
+    ,         _______ , NAV_ET , XXXXXXX  , XXXXXXX  , _______  , _______ , _______
+  )
+
   ,[SYM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
     , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQT , KC_CIRC
@@ -106,20 +120,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END  ,  GC(KC_D)
     ,         _______ , KC_ENT , KC_PGUP, KC_APP , KC_PGDN,GC(KC_LEFT),GC(KC_RGHT)
     ,         _______ , _______, XXXXXXX, XXXXXXX, _______, G(KC_TAB), _______
-  )
-
-  ,[MOS] = LAYOUT_universal(
-      _______, _______, _______, _______, _______, _______
-    , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
-    , _______, _______, _______, _______, _______, TO(BASE), _______
-   
-    ,                   _______, _______  , _______  , _______  , _______ , _______
-    ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,                  KC_BTN5 , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , XXXXXXX , _______
-    ,         _______ , NAV_ET , XXXXXXX  , XXXXXXX  , _______  , _______ , _______
   )
 };
 // clang-format on

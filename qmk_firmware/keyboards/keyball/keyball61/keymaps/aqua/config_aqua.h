@@ -28,13 +28,13 @@
 #define COMBO_ONLY_FROM_LAYER 0
 
 enum layeLs {
-  BASE,
-  SYM,
-  NUM,
-  WIN,
-  FUN,
-  NAV,
-  MOS
+  BASE
+  ,MOS
+  ,SYM
+  ,NUM
+  ,WIN
+  ,FUN
+  ,NAV
 };
 
 // Defines the keycodes used by our macros in process_record_user
