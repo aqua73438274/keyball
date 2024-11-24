@@ -52,6 +52,7 @@ enum custom_keycodes {
   ,PAST
   ,UNREDO
   ,CLPBD
+  ,BTN1
 };
 
 // Short aliases for home row mods and other tap-hold keys.
