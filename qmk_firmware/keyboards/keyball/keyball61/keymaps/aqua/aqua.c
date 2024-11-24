@@ -215,6 +215,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
       case UPDIR:    SEND_STRING_DELAY("../", TAP_CODE_DELAY); return false;
       case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC);} return false;
       case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());set_last_keycode(KC_NO);} return false;
+      case BTN1:    tap_code(KC_BTN1); return false;
     }
   }
 
@@ -244,7 +245,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   switch (get_highest_layer(state)) {
     case MOS:
       rgblight_sethsv(HSV_WHITE);
-      set_auto_mouse_enable(true);
       break;
     case NUM:
       rgblight_sethsv(HSV_RED);

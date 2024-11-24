@@ -629,8 +629,6 @@ bool is_mouse_record_kb(uint16_t keycode, keyrecord_t* record) {
     switch (keycode) {
         case SCRL_MO:
             return true;
-        case KC_MS_BTN1:
-            return false;
     }
     return is_mouse_record_user(keycode, record);
 }
