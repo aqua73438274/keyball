@@ -628,6 +628,7 @@ static void pressing_keys_update(uint16_t keycode, keyrecord_t *record) {
 bool is_mouse_record_kb(uint16_t keycode, keyrecord_t* record) {
     switch (keycode) {
         case SCRL_MO:
+        case KC_MS_BTN1:
             return true;
     }
     return is_mouse_record_user(keycode, record);
@@ -654,7 +655,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
 #ifndef MOUSEKEY_ENABLE
         // process KC_MS_BTN1~8 by myself
         // See process_action() in quantum/action.c for details.
-        case KC_MS_BTN2 ... KC_MS_BTN8: {
+        case KC_MS_BTN1 ... KC_MS_BTN8: {
             extern void register_mouse(uint8_t mouse_keycode, bool pressed);
             register_mouse(keycode, record->event.pressed);
             // to apply QK_MODS actions, allow to process others.
