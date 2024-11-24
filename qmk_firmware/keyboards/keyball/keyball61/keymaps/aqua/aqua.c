@@ -244,6 +244,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   switch (get_highest_layer(state)) {
     case MOS:
       rgblight_sethsv(HSV_WHITE);
+      set_auto_mouse_enable(true);
       break;
     case NUM:
       rgblight_sethsv(HSV_RED);
