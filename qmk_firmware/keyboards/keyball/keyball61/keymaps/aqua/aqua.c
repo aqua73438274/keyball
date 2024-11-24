@@ -276,6 +276,16 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
 }
 
+bool is_mouse_record_kb(uint16_t keycode, keyrecord_t* record) {
+    switch(keycode) {
+        case KC_BTN1:
+            return false;
+        default:
+            return false;
+    }
+    return  is_mouse_record_user(keycode, record);
+}
+
 #ifdef CAPS_WORD_ENABLE
 bool caps_word_press_user(uint16_t keycode) {
   switch (keycode) {
