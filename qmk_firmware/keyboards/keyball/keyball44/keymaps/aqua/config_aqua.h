@@ -30,13 +30,13 @@
 #define COMBO_ONLY_FROM_LAYER 0
 
 enum layeLs {
-  BASE,
-  SYM,
-  NUM,
-  WIN,
-  FUN,
-  NAV,
-  MOS
+  BASE
+  ,MOS
+  ,SYM
+  ,NUM
+  ,WIN
+  ,FUN
+  ,NAV
 };
 
 // Defines the keycodes used by our macros in process_record_user
@@ -110,7 +110,7 @@ enum {
     //Right
    ,                B_1_R1= KC_J  , B_1_R2= KC_F  , B_1_R3= KC_O     , B_1_R4= KC_U  , B_1_R5= KC_Q     , B_1_R6= KC_QUOT
    ,                B_2_R1= KC_Y  , B_2_R2= HOM_N , B_2_R3= HOM_A    , B_2_R4= HOM_I , B_2_R5= HOM_E    , B_2_R6= HOM_SL
-   ,                B_3_R1=KC_SCLN, B_3_R2= KC_W  , B_3_R3= KC_BTN1  , B_3_R4=KC_COMM, B_3_R5= HOM_DT   , B_3_R6= KC_ENT
+   ,                B_3_R1=KC_SCLN, B_3_R2= KC_W  , B_3_R3= BTN1     , B_3_R4=KC_COMM, B_3_R5= HOM_DT   , B_3_R6= KC_ENT
    ,B_4_R1= RMAGIC, B_4_R2= NAV_ET, B_4_R3= KC_NO , B_4_R4= KC_NO    , B_4_R5=KC_BTN2, B_4_R6= KC_NO
 
 };

@@ -216,6 +216,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {;
       case UPDIR:    SEND_STRING_DELAY("../", TAP_CODE_DELAY); return false;
       case LMAGIC: { process_left_magic(get_last_keycode(), get_last_mods()); set_last_keycode(KC_SPC);} return false;
       case RMAGIC: { process_right_magic(get_last_keycode(), get_last_mods());set_last_keycode(KC_NO);} return false;
+      case BTN1:    tap_code(KC_BTN1); return false;
 #endif
     }
   }
@@ -240,21 +241,9 @@ void pointing_device_init_user(void) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
   // レイヤーが1または3の場合、スクロールモードが有効になる
-  keyball_set_scroll_mode(get_highest_layer(state) == 1 || get_highest_layer(state) == WIN);
+  keyball_set_scroll_mode(get_highest_layer(state) == WIN);
   // keyball_set_scroll_mode(get_highest_layer(state) == 1);
 
-  // checks highest layer other than target layer
-  switch(get_highest_layer(remove_auto_mouse_layer(state, true))) {
-      case WIN:
-          // remove_auto_mouse_target must be called to adjust state *before* setting enable
-          state = remove_auto_mouse_layer(state, false);
-          set_auto_mouse_enable(false);
-          break;
-      default:
-          set_auto_mouse_enable(true);
-          break;
-  }
-  
   // レイヤーとLEDを連動させる
   switch (get_highest_layer(state)) {
     case MOS:
@@ -268,6 +257,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       break;
     case WIN:
       rgblight_sethsv(HSV_CHARTREUSE);
+      // WIN レイヤーがアクティブな場合、auto mouse 機能を無効にする
+      set_auto_mouse_enable(false);  // auto mouse を無効にする
       break;
     case SYM:
       rgblight_sethsv(HSV_YELLOW);
@@ -275,9 +266,14 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case NAV:
       rgblight_sethsv(HSV_GREEN);
       break;
-
     default:
       rgblight_sethsv(HSV_OFF);
+      break;
+  }
+
+  // 他のレイヤーがアクティブな場合は auto mouse を有効にする
+  if (get_highest_layer(state) != WIN) {
+    set_auto_mouse_enable(true);  // WIN 以外のレイヤーでは auto mouse を有効にする
   }
 
   return state;
