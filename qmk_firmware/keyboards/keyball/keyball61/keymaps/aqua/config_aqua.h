@@ -121,10 +121,10 @@ enum {
    ,B_4_L1= KC_NO , B_4_L2= WIN_DW, B_4_L3= WIN_UP, B_4_L4= WIN_MN  , B_4_L5= SFT_SP, B_4_L6= NUM_MN
 
     //Right
-   ,B_1_R1= KC_Y  , B_1_R2= KC_U  , B_1_R3= KC_I      , B_1_R4= KC_O     , B_1_R5= KC_P       , B_1_R6= KC_INT3
-   ,B_2_R1= KC_H  , B_2_R2= HOM_J , B_2_R3= HOM_K     , B_2_R4= HOM_L    , B_2_R5= HOM_SC     , B_2_R6= KC_QUOT
-   ,B_3_R1= KC_N  , B_3_R2= KC_M  , B_3_R3= KC_MS_BTN1, B_3_R4=KC_MS_BTN2, B_3_R5= HOM_BL     , B_3_R6= KC_SLSH
-   ,B_4_R1= NUM_BS, B_4_R2= NAV_ET, B_4_R3= KC_NO     , B_4_R4= KC_NO    , B_4_R5= KC_MS_BTN2 , B_4_R6= KC_NO
+   ,B_1_R1= KC_Y  , B_1_R2= KC_U  , B_1_R3= KC_I      , B_1_R4= KC_O     , B_1_R5= KC_P    , B_1_R6= KC_INT3
+   ,B_2_R1= KC_H  , B_2_R2= HOM_J , B_2_R3= HOM_K     , B_2_R4= HOM_L    , B_2_R5= HOM_SC  , B_2_R6= KC_QUOT
+   ,B_3_R1= KC_N  , B_3_R2= KC_M  , B_3_R3= KC_MS_BTN1, B_3_R4= KC_BTN2  , B_3_R5= HOM_BL  , B_3_R6= KC_SLSH
+   ,B_4_R1= NUM_BS, B_4_R2= NAV_ET, B_4_R3= KC_NO     , B_4_R4= KC_NO    , B_4_R5= KC_BTN2 , B_4_R6= KC_NO
 };
 #endif
 

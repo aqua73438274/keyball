@@ -54,8 +54,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   
   ,[SYM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-    , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQT , 
-    , MO(FUN), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
+    , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQT , KC_CIRC
+    ,GS(KC_S), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
     , _______, _______, KC_SLSH, KC_ASTR, KC_BSLS, UPDIR  , _______
     , _______, _______, _______, _______, _______, _______, _______
    
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   XXXXXXX, KC_F7  , KC_F8  , KC_F9  , KC_F10 , XXXXXXX
     ,                   XXXXXXX, KC_F1  , KC_F2  , KC_F3  , KC_F11 , XXXXXXX
     ,         _______ , XXXXXXX, KC_F4  , KC_F5  , KC_F6  , KC_F12 , _______
-   ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
   ,[NAV] = LAYOUT_universal(
