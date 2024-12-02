@@ -47,14 +47,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     ,                   _______, _______  , _______  , _______  , _______ , _______
     ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,                  KC_BTN5 , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , XXXXXXX , _______
+    ,                  KC_BTN5 ,C(KC_PGUP),C(KC_PGDN), A(KC_TAB), C(KC_W) , XXXXXXX
+    ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , HOM_F5  , _______
     ,         _______ , NAV_ET , XXXXXXX  , XXXXXXX  , _______  , _______ , _______
   )
-
+  
   ,[SYM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-    , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQT , KC_CIRC
+    , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQT , 
     , MO(FUN), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
     , _______, _______, KC_SLSH, KC_ASTR, KC_BSLS, UPDIR  , _______
     , _______, _______, _______, _______, _______, _______, _______

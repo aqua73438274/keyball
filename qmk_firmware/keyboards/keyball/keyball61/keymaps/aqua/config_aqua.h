@@ -85,6 +85,7 @@ enum {
     ,NUM_V   = LT(NUM, KC_V)
 #endif
 
+    ,HOM_F5 = LT(WIN,KC_F5)
     ,NUM_V   = LT(NUM, KC_V)
     ,WIN_MN = LT(WIN, KC_MINS)
 
