@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     ,                   _______, _______  , _______  , _______  , _______ , _______
     ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,                  KC_BTN5 ,C(KC_PGUP),C(KC_PGDN), KC_F5    , C(KC_W) , XXXXXXX
+    ,                  KC_BTN5 ,C(KC_PGUP),C(KC_PGDN), C(KC_R)  , C(KC_W) , XXXXXXX
     ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , _______ , _______
     ,         _______ , NAV_ET , XXXXXXX  , XXXXXXX  , _______  , _______ , _______
   )
