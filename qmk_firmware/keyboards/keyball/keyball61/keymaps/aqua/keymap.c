@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ,[MOS] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
     , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
+    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, KC_TAB
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
     , _______, _______, _______, _______, _______, TO(BASE), _______
    
