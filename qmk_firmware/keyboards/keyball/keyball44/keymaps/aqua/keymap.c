@@ -66,9 +66,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX
     ,                   _______, _______, _______, _______, _______
    
-    ,                   XXXXXXX, G(KC_7), G(KC_8), G(KC_9), XXXXXXX, XXXXXXX
-    ,             G(S(KC_LEFT)), G(KC_1), G(KC_2), G(KC_3), G(S(KC_RGHT)), XXXXXXX
-    ,                 G(KC_TAB), G(KC_4), G(KC_5), G(KC_6), KC_VOLD , KC_VOLU
+    ,                   XXXXXXX, G(KC_7)  , G(KC_8)  , G(KC_9), XXXXXXX, XXXXXXX
+    ,             G(S(KC_LEFT)), G(KC_1)  , G(KC_2)  , G(KC_3), G(S(KC_RGHT)), XXXXXXX
+    ,                   C(KC_W),C(KC_PGUP),C(KC_PGDN), C(KC_R), KC_VOLD , KC_VOLU
     ,         _______ , _______, _______, _______, _______
   )
 
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   _______, _______, _______, TO(BASE), _______
    
     ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX , XXXXXXX
-    ,                  KC_BTN5 ,C(KC_PGUP),C(KC_PGDN), C(KC_R) , C(KC_W) , XXXXXXX
+    ,                  KC_BTN5 , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX , XXXXXXX
     ,                  KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2 , XXXXXXX , _______
     ,         _______ , _______, XXXXXXX  , XXXXXXX  , _______
   )
