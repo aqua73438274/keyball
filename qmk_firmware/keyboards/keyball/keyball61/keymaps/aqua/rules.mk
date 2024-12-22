@@ -22,7 +22,7 @@ REPEAT_KEY_ENABLE = yes
 A2J_ENABLE ?= yes
 ACHORDION_ENABLE ?= yes
 CAPS_WORD_ENABLE ?= yes
-LAYER_LOCK_ENABLE = yes
+LAYER_LOCK_ENABLE ?= yes
 
 A2J_ENABLE ?= yes
 ifeq ($(strip $(A2J_ENABLE)), yes)
@@ -36,8 +36,8 @@ ifeq ($(strip $(ACHORDION_ENABLE)), yes)
 	SRC += features/achordion.c
 endif
 
-LAYER_LOCK_ENABLE ?= yes
-ifeq ($(strip $(LAYER_LOCK_ENABLE)), yes)
-	OPT_DEFS += -DLAYER_LOCK_ENABLE
-	SRC += features/layer_lock.c
-endif
+# LAYER_LOCK_ENABLE ?= yes
+# ifeq ($(strip $(LAYER_LOCK_ENABLE)), yes)
+# 	OPT_DEFS += -DLAYER_LOCK_ENABLE
+# 	SRC += features/layer_lock.c
+# endif
