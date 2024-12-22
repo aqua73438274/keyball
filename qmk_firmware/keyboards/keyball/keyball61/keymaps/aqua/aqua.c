@@ -303,9 +303,6 @@ void matrix_scan_user(void) {
 #ifdef ACHORDION_ENABLE
   achordion_task();
 #endif  // ACHORDION_ENABLE
-#ifdef LAYER_LOCK_ENABLE
-  layer_lock_task();
-#endif  // LAYER_LOCK_ENABLE
 }
 
 #endif // _AQUA_C_
