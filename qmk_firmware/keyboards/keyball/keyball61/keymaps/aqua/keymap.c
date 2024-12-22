@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
     ,                  KC_BTN5 , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
     ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , _______ , _______
-    ,         _______ , NAV_ET , XXXXXXX  , XXXXXXX  , _______  , _______ , _______
+    ,         QK_LLCK , NAV_ET , XXXXXXX  , XXXXXXX  , _______  , _______ , _______
   )
 
   ,[SYM] = LAYOUT_universal(
@@ -68,16 +68,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[NUM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-    , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, XXXXXXX
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
-    , _______, _______, _______, _______, _______, TO(BASE), _______
+    , _______, XXXXXXX, KC_D   , KC_E   , KC_F   , XXXXXXX
+    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, KC_X
+    , _______, KC_LGUI, KC_A   , KC_B   , KC_C   , XXXXXXX , XXXXXXX
+    , _______, _______, _______, _______, KC_LCTL, _______ , TO(BASE)
    
     ,                   _______, _______, _______, _______, _______, _______
     ,                   KC_TAB , KC_7   , KC_8   , KC_9   , KC_PLUS, KC_SLSH
     ,                   KC_COLN, KC_1   , KC_2   , KC_3   , KC_MINS, KC_ASTR
     ,         _______ , KC_COMM, KC_4   , KC_5   , KC_6   , KC_DOT , _______
-    ,         _______ , KC_0   , XXXXXXX, XXXXXXX, _______, _______, _______
+    ,         QK_LLCK , KC_0   , XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
   ,[WIN] = LAYOUT_universal(
@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,                   XXXXXXX, G(KC_7)  , G(KC_8)  , G(KC_9)  , XXXXXXX , XXXXXXX
     ,               GS(KC_LEFT), G(KC_1)  , KC_F11   , G(KC_3)  ,GS(KC_RGHT), XXXXXXX
     ,       _______ ,S(C(KC_T)),C(KC_PGUP), KC_F5    ,C(KC_PGDN), KC_VOLD , KC_VOLU
-    ,         C(KC_W) , _______, _______  , _______  , _______  , _______ , _______
+    ,       QK_LLCK ,  C(KC_W) , _______  , _______  , _______  , _______ , _______
   )
 
   ,[FUN] = LAYOUT_universal(
