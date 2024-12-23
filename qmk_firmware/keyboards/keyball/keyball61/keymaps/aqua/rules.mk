@@ -22,7 +22,7 @@ REPEAT_KEY_ENABLE = yes
 A2J_ENABLE ?= yes
 ACHORDION_ENABLE ?= yes
 CAPS_WORD_ENABLE ?= yes
-LAYER_LOCK_ENABLE ?= yes
+# LAYER_LOCK_ENABLE ?= yes
 
 A2J_ENABLE ?= yes
 ifeq ($(strip $(A2J_ENABLE)), yes)
