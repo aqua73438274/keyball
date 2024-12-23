@@ -36,8 +36,8 @@ ifeq ($(strip $(ACHORDION_ENABLE)), yes)
 	SRC += features/achordion.c
 endif
 
-# LAYER_LOCK_ENABLE ?= yes
-# ifeq ($(strip $(LAYER_LOCK_ENABLE)), yes)
-# 	OPT_DEFS += -DLAYER_LOCK_ENABLE
-# 	SRC += features/layer_lock.c
-# endif
+LAYER_LOCK_ENABLE ?= yes
+ifeq ($(strip $(LAYER_LOCK_ENABLE)), yes)
+	OPT_DEFS += -DLAYER_LOCK_ENABLE
+	SRC += features/layer_lock.c
+endif
