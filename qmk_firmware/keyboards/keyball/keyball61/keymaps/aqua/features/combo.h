@@ -85,11 +85,11 @@ enum combos {
   COMBO_cpWrd_1,
   COMBO_reTrs_1,
   COMBO_clbd_1,
-　COMBO_ms1_1,
-　COMBO_ms1_2,
-　COMBO_ms1_3,
-　COMBO_ms1_4,
-　COMBO_ms1_5,
+  COMBO_ms1_1,
+  COMBO_ms1_2,
+  COMBO_ms1_3,
+  COMBO_ms1_4,
+  COMBO_ms1_5,
   // End paste from spreadsheet `def 2`
 };
 
