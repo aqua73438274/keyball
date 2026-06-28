@@ -148,6 +148,7 @@ static PROGMEM combo_keys_t
   ,paste_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, COMBO_END}
 
   // right-right 2_2
+  ,delAll_combo_1  =      {B_2_R1,  B_2_R2, B_2_R3, COMBO_END}
   ,ms4_combo_1 =      {B_2_R1,  B_2_R2, B_2_R3, COMBO_END}
   ,home_combo_1 =      {B_2_R1,  B_2_R2, COMBO_END}
   ,BKSP_combo_r1 =   {B_2_R2,  B_2_R3, COMBO_END}
