@@ -90,6 +90,7 @@ enum combos {
   COMBO_ms1_3,
   COMBO_ms1_4,
   COMBO_ms1_5,
+  COMBO_COUNT
   // End paste from spreadsheet `def 2`
 };
 
