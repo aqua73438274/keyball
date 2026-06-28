@@ -9,7 +9,7 @@
 #ifdef LAYER_LOCK_ENABLE
 #include "features/layer_lock.h"
 #endif  // LAYER_LOCK_ENABLE
-// #include "features/combo.h"
+#include "features/combo.h"
 #include "features/translate_ansi_to_jis.h"
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
