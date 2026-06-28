@@ -85,6 +85,11 @@ enum combos {
   COMBO_cpWrd_1,
   COMBO_reTrs_1,
   COMBO_clbd_1,
+　COMBO_ms1_1,
+　COMBO_ms1_2,
+　COMBO_ms1_3,
+　COMBO_ms1_4,
+　COMBO_ms1_5,
   // End paste from spreadsheet `def 2`
 };
 
@@ -141,7 +146,7 @@ static PROGMEM combo_keys_t
   ,paste_combo_1 =   {B_2_L5,  B_2_L4, B_2_L3, COMBO_END}
 
   // right-right 2_2
-  ,delAll_combo_1 =      {B_2_R1,  B_2_R2, B_2_R3, COMBO_END}
+  ,ms3_combo_1 =      {B_2_R1,  B_2_R2, B_2_R3, COMBO_END}
   ,home_combo_1 =      {B_2_R1,  B_2_R2, COMBO_END}
   ,BKSP_combo_r1 =   {B_2_R2,  B_2_R3, COMBO_END}
   ,BKSPwd_combo_1 =  {B_2_R2,  B_2_R3, B_2_R4, COMBO_END}
@@ -166,6 +171,7 @@ static PROGMEM combo_keys_t
   ,dBSLH_combo_1 =  {B_1_R5,  B_2_R4, COMBO_END} 
   ,astr_combo_1 =   {B_2_R3,  B_3_R2,  B_3_R4, COMBO_END}
   ,f7_combo_2 =  {B_2_R3,  B_2_R4,  B_3_R2, COMBO_END}
+  ,ms3_combo_1 =   {B_2_R3,  B_3_R2,  B_3_R4, COMBO_END}
 
   // left-left 3_3
   ,lng1_combo =   {B_3_L4,  B_3_L3, COMBO_END}
@@ -182,6 +188,9 @@ static PROGMEM combo_keys_t
   ,rgtWd_combo_1 = {B_3_R3,  B_3_R4, B_3_R5, COMBO_END}
   ,unds_combo_1 =  {B_3_R2,  B_3_R4, COMBO_END}
   ,reTrs_combo_1 = {B_3_R2,  B_3_R3,  B_3_R4, B_3_R5, COMBO_END}
+  ,ms1_combo_1 =   {B_3_R2,  B_3_R3, COMBO_END}
+  ,ms2_combo_1 =   {B_3_R4,  B_3_R3, COMBO_END}
+  ,ms5_combo_1 =   {B_3_R2,  B_3_R3, B_3_R1, COMBO_END}
   ;
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -261,6 +270,11 @@ combo_t key_combos[COMBO_COUNT] = {
   ,[COMBO_cpWrd_1] = COMBO(cpWrd_combo, CW_TOGG)//
   ,[COMBO_reTrs_1] = COMBO_ACTION(reTrs_combo_1)
   ,[COMBO_clbd_1] = COMBO_ACTION(clbd_combo_1)
+  ,[COMBO_ms1_1] = COMBO_ACTION(ms1_combo_1)
+  ,[COMBO_ms2_1] = COMBO(ms2_combo_1, KC_MS_BTN2)
+  ,[COMBO_ms3_1] = COMBO(ms3_combo_1, KC_MS_BTN3)
+  ,[COMBO_ms4_1] = COMBO(ms4_combo_1, KC_MS_BTN4)
+  ,[COMBO_ms5_1] = COMBO(ms5_combo_1, KC_MS_BTN5)
   // End paste from spreadsheet `def 3`
 };
 
@@ -292,6 +306,7 @@ void process_combo_event(uint16_t combo_index, bool p) {
     case COMBO_zomP_1: if (p) {SEND_STRING(SS_DOWN(X_LCTL)SS_TAP(X_KP_PLUS)SS_UP(X_LCTL));}  break;
     case COMBO_zomM_1: if (p) {SEND_STRING(SS_DOWN(X_LCTL)SS_TAP(X_KP_MINUS)SS_UP(X_LCTL));}  break;
     case COMBO_clbd_1: if (p) {SEND_STRING(SS_LGUI("v"));}  break;
+    case COMBO_ms1_1: if (p) { register_code(KC_MS_BTN1); } else { unregister_code(KC_MS_BTN1); } break;
     // End paste from spreadsheet `def 4`
   }
 };
