@@ -1,3 +1,4 @@
+#pragma once
 /* 
  *
  * ref：https://docs.qmk.fm/#/ja/feature_combo?id=%e3%82%b3%e3%83%b3%e3%83%9c
@@ -6,6 +7,7 @@
  * rules.mk: COMBO_ENABLE = yes
  * config.h: #define COMBO_COUNT x（x=number of combos）
  */
+#include QMK_KEYBOARD_H // これが必須です
 
 enum combos {
   // Begin paste from spreadsheet `def 2`
