@@ -15,7 +15,7 @@ GRAVE_ESC_ENABLE ?= no
 NKRO_ENABLE ?= no
 
 # aqua settings
-# COMBO_ENABLE = yes
+COMBO_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
 
 #ALT_KEYMAP_DISEBLE #for use qwerty layout
