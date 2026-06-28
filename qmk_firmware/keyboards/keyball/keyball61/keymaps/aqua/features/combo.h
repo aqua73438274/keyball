@@ -7,7 +7,7 @@
  * rules.mk: COMBO_ENABLE = yes
  * config.h: #define COMBO_COUNT x（x=number of combos）
  */
-#include QMK_KEYBOARD_H // これが必須です
+#include QMK_KEYBOARD_H
 
 enum combos {
   // Begin paste from spreadsheet `def 2`
