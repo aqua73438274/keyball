@@ -6,9 +6,6 @@
 #ifdef ACHORDION_ENABLE
 #include "features/achordion.h"
 #endif  // ACHORDION_ENABLE
-#ifdef LAYER_LOCK_ENABLE
-#include "features/layer_lock.h"
-#endif  // LAYER_LOCK_ENABLE
 #include "features/combo.h"
 #include "features/translate_ansi_to_jis.h"
 
@@ -303,9 +300,6 @@ void matrix_scan_user(void) {
 #ifdef ACHORDION_ENABLE
   achordion_task();
 #endif  // ACHORDION_ENABLE
-#ifdef LAYER_LOCK_ENABLE
-  layer_lock_task();
-#endif  // LAYER_LOCK_ENABLE
 }
 
 #endif // _AQUA_C_
