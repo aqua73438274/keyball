@@ -224,7 +224,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,         _______ , _______, XXXXXXX, XXXXXXX, _______, G(KC_TAB), _______
   )
 };
-#end if
+#endif
 // clang-format on
 
 #ifdef OLED_ENABLE
