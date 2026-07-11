@@ -142,43 +142,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   ,[MOS] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-    , _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-    , _______, KC_LGUI, KC_LALT, KC_LSFT, KC_LCTL, KC_TAB
-    , _______, KC_LGUI, XXXXXXX, KC_LCTL, XXXXXXX, XXXXXXX , XXXXXXX
-    , _______, _______, _______, _______, _______, TO(BASE), _______
+    , _______, _______, _______, _______, _______, _______
+    , _______, _______, _______, _______, _______, _______
+    , _______, _______, _______, _______, _______, _______ , _______
+    , _______, _______, _______, _______, _______, _______ , _______
    
     ,                   _______, _______  , _______  , _______  , _______ , _______
-    ,                  XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,                  KC_BTN5 , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX , XXXXXXX
-    ,         _______ ,KC_BTN4 , KC_BTN3  , KC_BTN1  , KC_BTN2  , _______ , _______
-    ,         LLOCK   , NAV_ET , XXXXXXX  , XXXXXXX  , _______  , _______ , _______
+    ,                  _______ , _______  , _______  , _______  , _______ , _______
+    ,                  _______ , _______  , _______  , _______  , _______ , _______
+    ,         _______ ,_______ , _______  , _______  , _______  , _______ , _______
+    ,         _______ ,_______ , _______  , _______  , _______  , _______ , _______
   )
 
   ,[SYM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-    , _______, KC_GRV , KC_LABK, KC_RABK, KC_DQT , KC_CIRC
-    ,GS(KC_S), KC_EXLM, KC_MINS, KC_PLUS, KC_EQL , KC_HASH
-    , _______, _______, KC_SLSH, KC_ASTR, KC_BSLS, UPDIR  , _______
+    , _______, KC_GRV , KC_LABK, KC_RABK, KC_MINS, KC_PIPE
+    ,GS(KC_S), KC_EXLM, KC_ASTR, KC_SLSH, KC_EQL , KC_AMPR
+    , _______, KC_TILD, KC_PLUS, KC_LCBR, KC_RCBR, KC_PERC , UPDIR
     , _______, _______, _______, _______, _______, _______, _______
    
     ,                   _______, _______, _______, _______, _______, _______
-    ,                   KC_AMPR, KC_QUOT, KC_LBRC, KC_RBRC, KC_PERC, _______
-    ,                   KC_PIPE, KC_COLN, KC_LPRN, KC_RPRN, KC_QUES, _______
-    ,         _______ , KC_TILD, KC_DLR , KC_LCBR, KC_RCBR, KC_AT  , _______
+    ,                   KC_CIRC, KC_LBRC, KC_RBRC, KC_DLR , KC_PERC, _______
+    ,                   KC_HASH, KC_LPRN, KC_RPRN, KC_SCLN, KC_DQUO,  _______
+    ,         _______ , KC_AT  , KC_COLN, KC_UNDS, KC_QUES, KC_QUOT, _______
     ,         _______ , _______, XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
   ,[NUM] = LAYOUT_universal(
       _______, _______, _______, _______, _______, _______
-    , _______, XXXXXXX, KC_D   , KC_E   , KC_F   , XXXXXXX
-    , _______, XXXXXXX, KC_LALT, KC_LSFT, KC_LCTL, KC_X
-    , _______, KC_LGUI, KC_A   , KC_B   , KC_C   , XXXXXXX , XXXXXXX
+    , _______, KC_LBRC, S(KC_D), S(KC_E), S(KC_F), KC_RBRC
+    , _______, KC_LGUI, KC_LALT, KC_LSFT, KC_LCTL, S(KC_X)
+    , _______, KC_LPRN, S(KC_A), S(KC_B), S(KC_C), KC_RPRN , XXXXXXX
     , _______, _______, _______, _______, KC_LCTL, _______ , TO(BASE)
    
     ,                   _______, _______, _______, _______, _______, _______
-    ,                   KC_TAB , KC_7   , KC_8   , KC_9   , KC_PLUS, KC_SLSH
-    ,                   KC_COLN, KC_1   , KC_2   , KC_3   , KC_MINS, KC_ASTR
-    ,         _______ , KC_COMM, KC_4   , KC_5   , KC_6   , KC_DOT , _______
+    ,                   KC_TAB , KC_N7   , KC_N8   , KC_N9   , KC_PLUS, KC_SLSH
+    ,                   KC_COLN, KC_N1   , KC_N2   , KC_N3   , KC_ENT , KC_ASTR
+    ,         _______ , KC_COMM, KC_N4   , KC_N5   , KC_N6   , KC_DOT , _______
     ,         LLOCK   , KC_0   , XXXXXXX, XXXXXXX, _______, _______, _______
   )
 
@@ -211,17 +211,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
   ,[NAV] = LAYOUT_universal(
-      _______   , _______, _______  , _______ , _______  , _______
-    , _______   , XXXXXXX, XXXXXXX  , XXXXXXX , XXXXXXX  , XXXXXXX
-    , _______   , KC_LGUI, KC_LALT  , KC_LSFT , KC_LCTL  , KC_TAB
-    , _______   , KC_LGUI, XXXXXXX  , XXXXXXX , XXXXXXX  , XXXXXXX , XXXXXXX
-    , KC_PGUP   , KC_LEFT,  KC_RGHT , KC_PGDN ,C(KC_PGUP), _______ ,C(KC_PGDN)
+      _______   , _______   , _______   , _______ , _______   , _______
+    , _______   , XXXXXXX   , C(KC_E)   , KC_F2   , KC_F6   , XXXXXXX
+    , _______   , KC_LGUI   , KC_LALT   , KC_LSFT , KC_LCTL   ,GS(KC_RGHT)
+    , _______   , G(KC_UP)  ,GS(KC_LEFT),GS(KC_P) ,GS(KC_RGHT), XXXXXXX , GS(KC_S)
+    , GS(KC_1)  , GS(KC_2)  ,GS(KC_3)   ,GS(KC_4) ,C(KC_PGUP) , _______ ,C(KC_PGDN)
 
-    ,                   _______, _______, _______, _______, _______ , _______
-    ,                   XXXXXXX, KC_BSPC, KC_UP  , KC_DEL , XXXXXXX ,  GC(KC_F4)
-    ,                   KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END  ,  GC(KC_D)
-    ,         _______ , KC_ENT , KC_PGUP, KC_APP , KC_PGDN,GC(KC_LEFT),GC(KC_RGHT)
-    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, G(KC_TAB), _______
+    ,                   _______, _______  , _______, _______  , _______   , _______
+    ,                   C(KC_E) , C(KC_C)  , KC_UP  , C(KC_V)  , G(KC_Z)   ,  GC(KC_F4)
+    ,               GS(KC_RGHT), KC_LEFT  , KC_DOWN, KC_RGHT  ,GS(KC_RGHT),  GC(KC_D)
+    ,         _______ ,GS(KC_0),C(KC_PGUP), C(KC_T),C(KC_PGDN), C(KC_W)   ,GC(KC_RGHT)
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, GC(KC_LEFT)  , GC(KC_RGHT)
   )
 };
 #endif
