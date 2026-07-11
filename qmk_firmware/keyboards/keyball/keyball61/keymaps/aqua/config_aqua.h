@@ -35,6 +35,7 @@ enum layeLs {
   ,WIN
   ,FUN
   ,NAV
+  ,ALPH
 };
 
 // Defines the keycodes used by our macros in process_record_user
