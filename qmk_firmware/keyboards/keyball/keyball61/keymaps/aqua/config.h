@@ -36,4 +36,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
 // only required if not setting mouse layer elsewhere
 #define AUTO_MOUSE_DEFAULT_LAYER 1
-#define AUTO_MOUSE_TIME 50
+#define AUTO_MOUSE_TIME 100
