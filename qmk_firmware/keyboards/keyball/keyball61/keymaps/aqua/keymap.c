@@ -232,7 +232,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     , _______,_______,_______, _______, WIN_MN, SFT_SP, LMAGIC
    
     ,                   _______, _______, _______, _______, _______, _______
-    ,                   KC_SP  , KC_J   , KC_O   , KC_U   , KC_Q   , _______
+    ,                   KC_SPC , KC_J   , KC_O   , KC_U   , KC_Q   , _______
     ,                   KC_Y   , KC_N   , KC_A   , KC_I   , KC_E   , _______
     ,         _______ , KC_X   , KC_W   , KC_COMM, KC_DOT , KC_V   , _______
     ,         RMAGIC  , NAV_ET , XXXXXXX, XXXXXXX, _______, _______, _______
