@@ -211,17 +211,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
   ,[NAV] = LAYOUT_universal(
-      _______   , _______   , _______   , _______ , _______   , _______
-    , _______   , XXXXXXX   , C(KC_E)   , KC_F2   , KC_F6   , XXXXXXX
+         KC_ESC ,G(KC_TAB)  ,KC_F2      , KC_F3   , KC_F4     , KC_F5 
+    , _______   , XXXXXXX   , C(KC_E)   , KC_F2   , KC_F6     , XXXXXXX
     , _______   , KC_LGUI   , KC_LALT   , KC_LSFT , KC_LCTL   ,GS(KC_RGHT)
     , _______   , G(KC_UP)  ,GS(KC_LEFT),GS(KC_P) ,GS(KC_RGHT), XXXXXXX , GS(KC_S)
     , GS(KC_1)  , GS(KC_2)  ,GS(KC_3)   ,GS(KC_4) ,C(KC_PGUP) , _______ ,C(KC_PGDN)
 
-    ,                   _______, _______  , _______, _______  , _______   , _______
-    ,                   C(KC_E) , C(KC_C)  , KC_UP  , C(KC_V)  , G(KC_Z)   ,  GC(KC_F4)
+    ,                    KC_F6  , KC_F7   , KC_F8  , KC_F9    , KC_F10    , KC_F11
+    ,                   C(KC_E) , C(KC_C) , KC_UP  , C(KC_V)  , G(KC_Z)   ,  GC(KC_F4)
     ,               GS(KC_RGHT), KC_LEFT  , KC_DOWN, KC_RGHT  ,GS(KC_RGHT),  GC(KC_D)
     ,         _______ ,GS(KC_0),C(KC_PGUP), C(KC_T),C(KC_PGDN), C(KC_W)   ,GC(KC_RGHT)
-    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, GC(KC_LEFT)  , GC(KC_RGHT)
+    ,         _______ , _______, XXXXXXX, XXXXXXX, _______, GC(KC_LEFT)   , GC(KC_RGHT)
+  )
+
+  ,[ALPH] = LAYOUT_universal(
+      _______,_______,_______, _______,_______, _______
+    , KC_DLR , KC_B  , KC_Z  , KC_D   , KC_F  , KC_MINS
+    , KC_BSPC, KC_H  , KC_R  , KC_S   , KC_T  , KC_G
+    , KC_AT  , KC_P  , KC_L  , KC_M   , KC_C  , KC_K  , KC_DLR
+    , _______,_______,_______, _______, WIN_MN, SFT_SP, LMAGIC
+   
+    ,                   _______, _______, _______, _______, _______, _______
+    ,                   KC_SP  , KC_J   , KC_O   , KC_U   , KC_Q   , _______
+    ,                   KC_Y   , KC_N   , KC_A   , KC_I   , KC_E   , _______
+    ,         _______ , KC_X   , KC_W   , KC_COMM, KC_DOT , KC_V   , _______
+    ,         RMAGIC  , NAV_ET , XXXXXXX, XXXXXXX, _______, _______, _______
   )
 };
 #endif
