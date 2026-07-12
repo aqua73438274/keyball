@@ -3,6 +3,10 @@
 
 #define GC(key) RGUI(RCTL(key))
 #define GS(key) RGUI(RSFT(key))
+#define AC(key) RALT(RCTL(key))
+#define AGS(key) RALT(GS(key)))
+#define AGC(key) RALT(GC(key)))
+#define CAGS(key) RCTL(AGS(key))))
 
 // Unfortunately, some applications drop or misorder fast key events. This is a
 // partial fix to slow down the rate at which macros are sent.
